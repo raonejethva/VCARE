@@ -20,10 +20,12 @@
             transform: translateY(0);
         }
         
+        /* Strict Dual-Language Layout Toggle Engine */
         .lang-en .text-gu, .lang-gu .text-en {
             display: none !important;
         }
 
+        /* PREMIUM ULTRA-MODERN LUXURY UI STYLING */
         .premium-card {
             transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
             border: 1px solid rgba(226, 232, 240, 0.8);
@@ -58,6 +60,7 @@
             transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
         }
 
+        /* LUXURIOUS SLIDE DOWN PANEL WITH APPLE-STYLE INTERACTION */
         .slide-down-panel {
             animation: slideDownFade 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
         }
@@ -66,6 +69,7 @@
             to { opacity: 1; transform: translateY(0); }
         }
 
+        /* ROTATING LOADER ANIMATION FOR SPINNER EFFECT */
         @keyframes spinner-rotation {
             from { transform: rotate(0deg); }
             to { transform: rotate(360deg); }
@@ -74,6 +78,7 @@
             animation: spinner-rotation 0.8s linear infinite;
         }
 
+        /* SHIMMER GLOW FOR THE TOP CONVERTING ANNUAL CARD */
         @keyframes border-rainbow-glow {
             0% { border-color: #f59e0b; box-shadow: 0 10px 30px -10px rgba(245, 158, 11, 0.2); }
             50% { border-color: #2563eb; box-shadow: 0 10px 35px -5px rgba(37, 99, 235, 0.4); }
@@ -132,7 +137,8 @@
 
     <footer id="footer-slot" class="bg-slate-950 text-slate-500 text-[10px] py-8 px-6 text-center border-t border-slate-900 shrink-0 tracking-wider"></footer>
 
-    let currentSelectedPlan = "";
+    <script>
+        let currentSelectedPlan = "";
 
         // Modular dynamic loader engine using safe relative mapping for GitHub pages compatibility
         async function loadComponentSlot(slotId, filePath) {
@@ -153,7 +159,7 @@
             await loadComponentSlot('pricing-slot', './components/pricing.html');
             await loadComponentSlot('footer-slot', './components/footer.html');
 
-            // NEW: Read the URL hash string on refresh to preserve routing history memory
+            // Read the URL hash string on refresh to preserve routing history memory
             const initialHash = window.location.hash.replace('#', '');
             const validPages = ['home', 'services', 'pricing', 'success'];
             
@@ -164,7 +170,7 @@
             }
         });
 
-        // NEW: Listen for browser back/forward buttons or hash updates directly
+        // Listen for browser back/forward buttons or hash updates directly
         window.addEventListener('hashchange', () => {
             const currentHash = window.location.hash.replace('#', '') || 'home';
             navigateTo(currentHash);
@@ -213,7 +219,7 @@
                 currentActiveNode.className = "text-amber-600 transition-colors font-extrabold";
             }
 
-            // NEW: Push the selection directly into browser URL footprints without triggering full document reloads
+            // Push the selection directly into browser URL footprints without triggering full document reloads
             if(window.location.hash !== '#' + pageId) {
                 window.location.hash = pageId;
             }
