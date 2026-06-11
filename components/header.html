@@ -1,0 +1,40 @@
+<div class="max-w-7xl mx-auto px-6 h-24 flex justify-between items-center">
+    <button onclick="navigateTo('home')" class="flex items-center gap-3.5 text-left focus:outline-none group">
+        <div class="relative bg-gradient-to-br from-slate-950 via-slate-900 to-amber-700 w-14 h-14 rounded-2xl shadow-xl flex items-center justify-center group-hover:rotate-1 transition-transform overflow-hidden">
+            <img src="FINAL%20LOGO%20BLUE%20.png" alt="Vatan Care Logo" class="w-full h-full object-cover">
+            <div class="absolute -bottom-1 -right-1 bg-amber-500 text-slate-950 text-[10px] w-5 h-5 rounded-md flex items-center justify-center border-2 border-white shadow-sm z-10">
+                <i class="fa-solid fa-shield"></i>
+            </div>
+        </div>
+        <div>
+            <span class="text-2xl font-black tracking-tight text-slate-950 block leading-none">VATAN CARE</span>
+            <span class="text-[10px] tracking-widest text-amber-600 font-extrabold uppercase block mt-2">
+                <span class="text-en">Frame The Dream</span>
+                <span class="text-gu">ચિંતા છોડો, અમે છીએ સેવામાં</span>
+            </span>
+        </div>
+    </button>
+    
+    <div class="flex items-center gap-6">
+        <nav class="hidden lg:flex items-center gap-8 font-bold text-slate-600 text-xs uppercase tracking-widest">
+            <button id="nav-home" onclick="navigateTo('home')" class="text-amber-600 transition-colors font-extrabold">
+                <span class="text-en">Home</span><span class="text-gu">હોમ પેજ</span>
+            </button>
+            <button id="nav-services" onclick="navigateTo('services')" class="hover:text-amber-600 transition-colors">
+                <span class="text-en">All 9 Services</span><span class="text-gu">તમામ ૯ સેવાઓ</span>
+            </button>
+            <button id="nav-pricing" onclick="navigateTo('pricing')" class="hover:text-amber-600 transition-colors">
+                <span class="text-en">Retainer Pricing</span><span class="text-gu">પ્લાન કિંમત</span>
+            </button>
+        </nav>
+
+        <div class="bg-slate-100 p-1 rounded-xl border border-gray-200/60 flex items-center font-black text-xs shadow-inner">
+            <button id="btn-lang-en" onclick="setLanguage('en')" class="px-4 py-2 rounded-lg transition-all bg-slate-900 text-white shadow-sm">EN</button>
+            <button id="btn-lang-gu" onclick="setLanguage('gu')" class="px-4 py-2 rounded-lg transition-all text-slate-600">ગુજરાતી</button>
+        </div>
+
+        <button onclick="navigateTo('pricing')" class="bg-amber-500 hover:bg-amber-600 text-slate-950 px-6 py-3.5 rounded-xl font-black text-xs uppercase tracking-wider shadow-md transition-all hidden sm:block premium-btn">
+            <span class="text-en">View Retainers</span><span class="text-gu">પ્લાનની વિગત</span>
+        </button>
+    </div>
+</div>
