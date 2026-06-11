@@ -20,12 +20,10 @@
             transform: translateY(0);
         }
         
-        /* Strict Dual-Language Layout Toggle Engine */
         .lang-en .text-gu, .lang-gu .text-en {
             display: none !important;
         }
 
-        /* PREMIUM ULTRA-MODERN LUXURY UI STYLING */
         .premium-card {
             transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
             border: 1px solid rgba(226, 232, 240, 0.8);
@@ -60,7 +58,6 @@
             transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
         }
 
-        /* LUXURIOUS SLIDE DOWN PANEL WITH APPLE-STYLE INTERACTION */
         .slide-down-panel {
             animation: slideDownFade 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
         }
@@ -69,7 +66,6 @@
             to { opacity: 1; transform: translateY(0); }
         }
 
-        /* ROTATING LOADER ANIMATION FOR SPINNER EFFECT */
         @keyframes spinner-rotation {
             from { transform: rotate(0deg); }
             to { transform: rotate(360deg); }
@@ -78,7 +74,6 @@
             animation: spinner-rotation 0.8s linear infinite;
         }
 
-        /* SHIMMER GLOW FOR THE TOP CONVERTING ANNUAL CARD */
         @keyframes border-rainbow-glow {
             0% { border-color: #f59e0b; box-shadow: 0 10px 30px -10px rgba(245, 158, 11, 0.2); }
             50% { border-color: #2563eb; box-shadow: 0 10px 35px -5px rgba(37, 99, 235, 0.4); }
@@ -91,6 +86,7 @@
 </head>
 <body class="bg-slate-50/50 text-slate-900 font-sans antialiased flex flex-col min-h-screen lang-en" id="root-viewport">
 
+    <!-- GLOBAL TOP BANNER NODE -->
     <div class="bg-slate-950 text-white text-xs py-3 px-4 border-b border-slate-800 shrink-0 tracking-wide">
         <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-2.5">
             <div class="flex items-center gap-3 font-semibold text-slate-300">
@@ -118,13 +114,16 @@
         </div>
     </div>
 
+    <!-- INJECTED SYSTEM HEADER CONTAINER -->
     <header id="header-slot" class="bg-white/80 backdrop-blur-md border-b border-gray-100 sticky top-0 z-50 shadow-sm shrink-0 transition-all"></header>
 
     <main class="grow">
+        <!-- COMPONENT ROUTING MOUNT TIERS -->
         <div id="home-slot" class="page-view active"></div>
         <div id="services-slot" class="page-view"></div>
         <div id="pricing-slot" class="page-view"></div>
 
+        <!-- SUCCESS VIEW SCREEN -->
         <div id="page-success" class="page-view">
             <section class="max-w-xl mx-auto my-20 p-10 bg-white border border-gray-100 rounded-3xl shadow-2xl text-center space-y-5">
                 <div class="w-16 h-16 bg-emerald-100 text-emerald-600 flex items-center justify-center rounded-full text-2xl mx-auto"><i class="fa-solid fa-circle-check"></i></div>
@@ -135,31 +134,39 @@
         </div>
     </main>
 
+    <!-- INJECTED SYSTEM FOOTER CONTAINER -->
     <footer id="footer-slot" class="bg-slate-950 text-slate-500 text-[10px] py-8 px-6 text-center border-t border-slate-900 shrink-0 tracking-wider"></footer>
 
     <script>
         let currentSelectedPlan = "";
 
-        // Modular dynamic loader engine using safe relative mapping for GitHub pages compatibility
+        // Modular dynamic loader engine returning a promise for sequence tracking
         async function loadComponentSlot(slotId, filePath) {
             try {
                 const response = await fetch(filePath);
                 if (!response.ok) throw new Error(`HTTP Error Status: ${response.status}`);
-                document.getElementById(slotId).innerHTML = await response.text();
+                const htmlContent = await response.text();
+                const slotElement = document.getElementById(slotId);
+                if (slotElement) {
+                    slotElement.innerHTML = htmlContent;
+                }
             } catch (err) {
                 console.error(`Pipeline footprint failed loading fragment inside slot ${slotId}:`, err);
             }
         }
 
-        // Initialize, stitch the page structure fragments, and read hash state on load
+        // Stitch page sections sequentially, validating DOM states before booting routing configurations
         window.addEventListener('DOMContentLoaded', async () => {
-            await loadComponentSlot('header-slot', './components/header.html');
-            await loadComponentSlot('home-slot', './components/home.html');
-            await loadComponentSlot('services-slot', './components/services.html');
-            await loadComponentSlot('pricing-slot', './components/pricing.html');
-            await loadComponentSlot('footer-slot', './components/footer.html');
+            // Force JavaScript to wait until all component structures are safely fetched and rendered
+            await Promise.all([
+                loadComponentSlot('header-slot', './components/header.html'),
+                loadComponentSlot('home-slot', './components/home.html'),
+                loadComponentSlot('services-slot', './components/services.html'),
+                loadComponentSlot('pricing-slot', './components/pricing.html'),
+                loadComponentSlot('footer-slot', './components/footer.html')
+            ]);
 
-            // Read the URL hash string on refresh to preserve routing history memory
+            // Read URL hash state only after DOM nodes safely exist
             const initialHash = window.location.hash.replace('#', '');
             const validPages = ['home', 'services', 'pricing', 'success'];
             
@@ -170,7 +177,7 @@
             }
         });
 
-        // Listen for browser back/forward buttons or hash updates directly
+        // Sync hash updates seamlessly
         window.addEventListener('hashchange', () => {
             const currentHash = window.location.hash.replace('#', '') || 'home';
             navigateTo(currentHash);
@@ -181,6 +188,8 @@
             const btnEn = document.getElementById('btn-lang-en');
             const btnGu = document.getElementById('btn-lang-gu');
             
+            if (!viewport) return;
+
             if (langCode === 'gu') {
                 viewport.classList.remove('lang-en');
                 viewport.classList.add('lang-gu');
@@ -198,7 +207,6 @@
             const navButtons = document.querySelectorAll('header nav button');
             navButtons.forEach(btn => btn.className = "hover:text-amber-600 transition-colors");
 
-            // Structural Router matching the split DOM architecture namespaces
             const targets = ['home', 'services', 'pricing', 'success'];
             targets.forEach(t => {
                 const node = document.getElementById(t + '-slot') || document.getElementById('page-' + t);
@@ -219,7 +227,6 @@
                 currentActiveNode.className = "text-amber-600 transition-colors font-extrabold";
             }
 
-            // Push the selection directly into browser URL footprints without triggering full document reloads
             if(window.location.hash !== '#' + pageId) {
                 window.location.hash = pageId;
             }
@@ -229,7 +236,10 @@
 
         function activatePlanFlow(planName, typeKey) {
             currentSelectedPlan = planName;
-            document.getElementById('target-plan-title').innerHTML = `<i class="fa-solid fa-box-open text-amber-500 mr-2"></i> ${planName}`;
+            const planTitleNode = document.getElementById('target-plan-title');
+            if (planTitleNode) {
+                planTitleNode.innerHTML = `<i class="fa-solid fa-box-open text-amber-500 mr-2"></i> ${planName}`;
+            }
             
             const arrays = ['prop-silver', 'prop-gold', 'prop-platinum', 'parent-silver', 'parent-gold', 'parent-platinum'];
             arrays.forEach(k => {
@@ -240,7 +250,8 @@
             const activeDeliverable = document.getElementById('services-' + typeKey);
             if(activeDeliverable) activeDeliverable.classList.remove('hidden');
             
-            document.getElementById('dynamic-services-panel').classList.remove('hidden');
+            const servicesPanel = document.getElementById('dynamic-services-panel');
+            if (servicesPanel) servicesPanel.classList.remove('hidden');
             
             arrays.forEach(k => {
                 const targetCard = document.getElementById('card-' + k);
@@ -255,13 +266,18 @@
                 }
             });
             
-            if(typeKey === 'parent-platinum') {
-                document.getElementById('card-parent-platinum').className = "premium-card bg-white p-8 rounded-3xl flex flex-col justify-between cursor-pointer border-4 border-blue-600 best-value-card relative transform scale-105 shadow-2xl bg-gradient-to-b from-white to-blue-50/20";
-            } else {
-                document.getElementById('card-' + typeKey).className = "premium-card bg-white border-2 border-amber-500 p-8 rounded-3xl flex flex-col justify-between shadow-xl relative transform scale-105 cursor-pointer";
+            const activeCard = document.getElementById('card-' + typeKey);
+            if (activeCard) {
+                if(typeKey === 'parent-platinum') {
+                    activeCard.className = "premium-card bg-white p-8 rounded-3xl flex flex-col justify-between cursor-pointer border-4 border-blue-600 best-value-card relative transform scale-105 shadow-2xl bg-gradient-to-b from-white to-blue-50/20";
+                } else {
+                    activeCard.className = "premium-card bg-white border-2 border-amber-500 p-8 rounded-3xl flex flex-col justify-between shadow-xl relative transform scale-105 cursor-pointer";
+                }
             }
             
-            document.getElementById('dynamic-services-panel').scrollIntoView({ behavior: 'smooth', block: 'start' });
+            if (servicesPanel) {
+                servicesPanel.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
         }
 
         function handleAdvancedDetailsSubmit(event) {
@@ -274,31 +290,35 @@
             const defaultText = document.getElementById('btn-default-text');
             const loadingText = document.getElementById('btn-loading-text');
 
-            phoneField.classList.remove('border-red-500', 'ring-2', 'ring-red-200');
-            errorNode.classList.add('hidden');
+            if (phoneField) phoneField.classList.remove('border-red-500', 'ring-2', 'ring-red-200');
+            if (errorNode) errorNode.classList.add('hidden');
 
-            const cleanedPhoneDigits = phoneField.value.replace(/[^0-9]/g, '');
+            const cleanedPhoneDigits = phoneField ? phoneField.value.replace(/[^0-9]/g, '') : '';
             
             if (cleanedPhoneDigits.length < 7 || cleanedPhoneDigits.length > 15) {
-                phoneField.classList.add('border-red-500', 'ring-2', 'ring-red-200');
-                errorNode.innerText = " Invalid Phone! Please write a valid digit framework.";
-                errorNode.classList.remove('hidden');
-                phoneField.focus();
+                if (phoneField) {
+                    phoneField.classList.add('border-red-500', 'ring-2', 'ring-red-200');
+                    phoneField.focus();
+                }
+                if (errorNode) {
+                    errorNode.innerText = " Invalid Phone! Please write a valid digit framework.";
+                    errorNode.classList.remove('hidden');
+                }
                 return;
             }
 
             const formData = {
-                nriName: nameField.value,
-                profession: document.getElementById('form-profession').value,
-                abroadPhone: phoneField.value,
+                nriName: nameField ? nameField.value : '',
+                profession: document.getElementById('form-profession') ? document.getElementById('form-profession').value : '',
+                abroadPhone: phoneField ? phoneField.value : '',
                 planSelected: currentSelectedPlan,
-                vatanAddress: document.getElementById('form-address').value,
-                elderScopeIssues: document.getElementById('form-work').value
+                vatanAddress: document.getElementById('form-address') ? document.getElementById('form-address').value : '',
+                elderScopeIssues: document.getElementById('form-work') ? document.getElementById('form-work').value : ''
             };
 
-            submitBtn.disabled = true;
-            defaultText.classList.add('hidden');
-            loadingText.classList.remove('hidden');
+            if (submitBtn) submitBtn.disabled = true;
+            if (defaultText) defaultText.classList.add('hidden');
+            if (loadingText) loadingText.classList.remove('hidden');
 
             const tunnelUrl = 'https://vatancare-backend-api-tik0.onrender.com/api/bookings/activate';              
             
@@ -314,13 +334,15 @@
             .then(data => {
                 if(data.success) {
                     const node = document.getElementById('success-dynamic-text-node');
-                    node.innerHTML = `
-                        <div class="text-left bg-slate-50 p-6 rounded-2xl text-xs space-y-2 my-3 border border-gray-100">
-                            <p><strong>NRI Name:</strong> ${formData.nriName}</p>
-                            <p><strong>Selected Framework:</strong> ${formData.planSelected}</p>
-                            <p><strong>Target Address Location:</strong> ${formData.vatanAddress}</p>
-                        </div>
-                    `;
+                    if (node) {
+                        node.innerHTML = `
+                            <div class="text-left bg-slate-50 p-6 rounded-2xl text-xs space-y-2 my-3 border border-gray-100">
+                                <p><strong>NRI Name:</strong> ${formData.nriName}</p>
+                                <p><strong>Selected Framework:</strong> ${formData.planSelected}</p>
+                                <p><strong>Target Address Location:</strong> ${formData.vatanAddress}</p>
+                            </div>
+                        `;
+                    }
                     navigateTo('success');
                 }
             })
@@ -329,9 +351,9 @@
                 alert('Connection footprint error. Verify Render endpoint pipelines.');
             })
             .finally(() => {
-                submitBtn.disabled = false;
-                loadingText.classList.add('hidden');
-                defaultText.classList.remove('hidden');
+                if (submitBtn) submitBtn.disabled = false;
+                if (loadingText) loadingText.classList.add('hidden');
+                if (defaultText) defaultText.classList.remove('hidden');
             });
         }
     </script>
