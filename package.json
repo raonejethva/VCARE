@@ -1,0 +1,52 @@
+{
+  "name": "vcare",
+  "version": "1.0.0",
+  "description": "Premium NRI Property & Parental Management Services - Visnagar",
+  "main": "index.html",
+  "scripts": {
+    "start": "python -m http.server 8000 --directory .",
+    "serve": "npx http-server -p 8000 -o index.html",
+    "serve:prod": "npx http-server -p 8000 --gzip -o index.html",
+    "lint": "eslint . --ext .js --ignore-pattern node_modules --ignore-pattern dist",
+    "lint:fix": "eslint . --ext .js --fix --ignore-pattern node_modules --ignore-pattern dist",
+    "format": "prettier --write \"**/*.{js,html,css,md,json}\"",
+    "format:check": "prettier --check \"**/*.{js,html,css,md,json}\"",
+    "validate:html": "echo 'HTML validation tool coming soon'",
+    "test": "echo 'Test suite coming soon. See TESTING.md for details'",
+    "test:unit": "echo 'Unit tests coming soon'",
+    "test:integration": "echo 'Integration tests coming soon'",
+    "test:e2e": "echo 'E2E tests coming soon'",
+    "test:watch": "echo 'Watch mode coming soon'",
+    "test:coverage": "echo 'Coverage report coming soon'",
+    "lighthouse": "npm install -g lighthouse && lighthouse http://localhost:8000 --view",
+    "build": "echo 'Build process coming soon'",
+    "deploy:gh-pages": "git push origin --delete gh-pages; git subtree push --prefix . origin gh-pages",
+    "security:audit": "npm audit",
+    "security:fix": "npm audit fix",
+    "docs": "echo 'Documentation generation coming soon'",
+    "ci": "npm run format:check && npm run lint && npm run test",
+    "precommit": "npm run format:check && npm run lint"
+  },
+  "keywords": [
+    "NRI",
+    "property-management",
+    "parental-care",
+    "Visnagar",
+    "Gujarat",
+    "India"
+  ],
+  "author": "Rao Nejethva",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/raonejethva/VCARE.git"
+  },
+  "bugs": {
+    "url": "https://github.com/raonejethva/VCARE/issues"
+  },
+  "homepage": "https://github.com/raonejethva/VCARE#readme",
+  "devDependencies": {
+    "eslint": "^8.0.0",
+    "prettier": "^3.0.0"
+  }
+}
