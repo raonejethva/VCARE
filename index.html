@@ -219,7 +219,7 @@
       // Modular dynamic loader engine returning a promise for sequence tracking
       async function loadComponentSlot(slotId, filePath) {
         try {
-          const response = await fetch(filePath);
+          const response = await fetch(filePath, { cache: "no-store" });
           if (!response.ok)
             throw new Error(`HTTP Error Status: ${response.status}`);
           const htmlContent = await response.text();
