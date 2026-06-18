@@ -290,6 +290,20 @@
           (btn) => (btn.className = "hover:text-amber-600 transition-colors"),
         );
 
+        // Reset and highlight mobile drawer nav buttons
+        const drawerButtons = document.querySelectorAll(
+          "#mobile-drawer nav button",
+        );
+        drawerButtons.forEach((btn) => {
+          btn.className =
+            "text-left py-3 px-4 rounded-xl hover:bg-slate-50 hover:text-amber-600 transition-all flex items-center gap-3";
+        });
+        const activeDrawerBtn = document.getElementById("drawer-nav-" + pageId);
+        if (activeDrawerBtn) {
+          activeDrawerBtn.className =
+            "text-left py-3 px-4 rounded-xl bg-amber-500/10 text-amber-700 transition-all flex items-center gap-3 font-extrabold";
+        }
+
         const targets = ["home", "services", "pricing", "success"];
         targets.forEach((t) => {
           const node =
@@ -322,6 +336,37 @@
         }
 
         window.scrollTo({ top: 0, behavior: "smooth" });
+      }
+
+      function toggleMobileMenu(open) {
+        const backdrop = document.getElementById("mobile-drawer-backdrop");
+        const drawer = document.getElementById("mobile-drawer");
+        if (!backdrop || !drawer) return;
+
+        if (open) {
+          backdrop.classList.remove("hidden");
+          setTimeout(() => {
+            backdrop.classList.remove("opacity-0");
+            backdrop.classList.add("opacity-100");
+            drawer.classList.remove("translate-x-full");
+            drawer.classList.add("translate-x-0");
+          }, 10);
+        } else {
+          backdrop.classList.remove("opacity-100");
+          backdrop.classList.add("opacity-0");
+          drawer.classList.remove("translate-x-0");
+          drawer.classList.add("translate-x-full");
+          setTimeout(() => {
+            backdrop.classList.add("hidden");
+          }, 300);
+        }
+      }
+
+      function navigateFromMobile(pageId) {
+        toggleMobileMenu(false);
+        setTimeout(() => {
+          navigateTo(pageId);
+        }, 150);
       }
 
       function activatePlanFlow(planName, typeKey) {
