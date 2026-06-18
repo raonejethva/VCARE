@@ -22,173 +22,215 @@
   </div>
 
   <div class="grid grid-cols-1 md:grid-cols-3 gap-10 items-stretch">
-    <div class="flex flex-col justify-between">
-      <div
-        id="card-prop-silver"
-        onclick="
-          activatePlanFlow('Property Silver ($80 USD / Month)', 'prop-silver')
-        "
-        class="premium-card bg-white border border-gray-200 p-8 rounded-3xl flex flex-col justify-between h-full cursor-pointer border-t-4 border-t-slate-400"
-      >
-        <div>
-          <h4
-            class="font-black text-slate-400 text-[10px] uppercase tracking-widest"
-          >
-            Property Care • 1 Month
-          </h4>
-          <h3
-            class="font-black text-slate-950 text-xl mt-1 uppercase tracking-wider"
-          >
-            Silver Plan
-          </h3>
-          <div class="text-4xl font-black text-slate-900 my-4.5">
-            $80<span class="text-xs text-gray-400 font-normal"> USD/MONTH</span>
-          </div>
-          <p class="text-xs text-gray-500 font-medium leading-relaxed">
-            Monthly vacant property checkups, high-definition photo/video
-            updates, structural moisture/leak checks, and local contractor
-            oversight.
-          </p>
+    <!-- Property Silver Plan -->
+    <div
+      id="card-prop-silver"
+      onclick="
+        activatePlanFlow('Property Silver ($80 USD / Month)', 'prop-silver')
+      "
+      class="premium-card bg-white border border-gray-200 p-8 rounded-3xl flex flex-col justify-between cursor-pointer border-t-4 border-t-slate-400"
+    >
+      <div>
+        <h4
+          class="font-black text-slate-400 text-[10px] uppercase tracking-widest"
+        >
+          Property Care • 1 Month
+        </h4>
+        <h3
+          class="font-black text-slate-950 text-xl mt-1 uppercase tracking-wider"
+        >
+          Silver Plan
+        </h3>
+        <div class="text-4xl font-black text-slate-900 my-4.5">
+          $80<span class="text-xs text-gray-400 font-normal"> USD/MONTH</span>
         </div>
-        <span class="text-xs font-bold text-amber-600 mt-6 block text-right"
-          >Select Plan <i class="fa-solid fa-arrow-down ml-1"></i
-        ></span>
+        <p class="text-xs text-gray-500 font-medium leading-relaxed">
+          Monthly vacant property checkups, high-definition photo/video updates,
+          structural moisture/leak checks, and local contractor oversight.
+        </p>
       </div>
-      <div
-        class="bg-slate-100/80 rounded-xl px-4 py-2.5 mt-3 text-center text-[10px] font-bold text-slate-500 tracking-wide"
-      >
-        Flexible Month-to-Month Plan
+      <div>
+        <div
+          class="bg-slate-100/80 rounded-xl px-4 py-2.5 mt-6 text-center text-[10px] font-bold text-slate-500 tracking-wide"
+        >
+          Flexible Month-to-Month Plan
+        </div>
+        <span class="text-xs font-bold text-amber-600 mt-4 block text-right">
+          Select Plan <i class="fa-solid fa-arrow-down ml-1"></i>
+        </span>
       </div>
     </div>
 
-    <div class="flex flex-col justify-between">
-      <div
-        id="card-prop-gold"
-        onclick="
-          activatePlanFlow(
-            'Property Gold ($480 / 6 Months - $80 USD / Month)',
-            'prop-gold',
-          )
-        "
-        class="premium-card bg-white border border-gray-200 p-8 rounded-3xl flex flex-col justify-between h-full cursor-pointer border-t-4 border-t-amber-500"
-      >
-        <div>
+    <!-- Property Gold Plan -->
+    <div
+      id="card-prop-gold"
+      onclick="
+        activatePlanFlow(
+          'Property Gold ($432 / 6 Months - $72 USD / Month equivalent)',
+          'prop-gold',
+        )
+      "
+      class="premium-card bg-white border border-gray-200 p-8 rounded-3xl flex flex-col justify-between cursor-pointer border-t-4 border-t-amber-500"
+    >
+      <div>
+        <div class="flex justify-between items-center">
           <h4
-            class="font-black text-amber-600 text-[10px] uppercase tracking-widest"
+            class="font-black text-amber-650 text-[10px] uppercase tracking-widest text-amber-600"
           >
             Property Care • 6 Months
           </h4>
-          <h3
-            class="font-black text-slate-950 text-xl mt-1 uppercase tracking-wider"
+          <span
+            class="inline-flex items-center gap-1 bg-amber-500 text-slate-950 text-[9px] font-black uppercase px-2 py-0.5 rounded-md shadow-sm"
           >
-            Gold Plan
-          </h3>
-          <div class="text-4xl font-black text-slate-900 my-4.5">
-            $480<span class="text-xs text-gray-400 font-normal">
-              USD/6 MONTHS ($80/MONTH)</span
+            Save 10%
+          </span>
+        </div>
+        <h3
+          class="font-black text-slate-950 text-xl mt-1.5 uppercase tracking-wider"
+        >
+          Gold Plan
+        </h3>
+        <div class="my-4.5">
+          <div class="flex items-baseline gap-2">
+            <span class="text-4xl font-black text-slate-900">$432</span>
+            <span class="text-sm font-bold text-gray-400 line-through"
+              >$480</span
+            >
+            <span
+              class="text-[10px] text-emerald-700 font-black bg-emerald-100/80 px-2 py-0.5 rounded-md"
+            >
+              SAVE $48
+            </span>
+          </div>
+          <div class="text-[11px] text-gray-500 font-bold mt-1 uppercase">
+            USD/6 MONTHS
+            <span class="text-slate-400 font-medium lowercase"
+              >($72/month equivalent)</span
             >
           </div>
-          <p class="text-xs text-gray-500 font-medium leading-relaxed">
-            Comprehensive structural checkups, utility bill payments, municipal
-            tax verification, and hand-delivered document tracking.
-          </p>
         </div>
-        <span class="text-xs font-bold text-amber-600 mt-6 block text-right"
-          >Select Plan <i class="fa-solid fa-arrow-down ml-1"></i
-        ></span>
+        <p class="text-xs text-gray-500 font-medium leading-relaxed">
+          Comprehensive structural checkups, utility bill payments, municipal
+          tax verification, and hand-delivered document tracking.
+        </p>
       </div>
-      <div
-        class="bg-gradient-to-r from-amber-500/10 to-amber-600/5 border border-amber-400/30 rounded-2xl p-3.5 mt-3 text-left shadow-sm flex items-center justify-between gap-3 group hover:border-amber-500 transition-colors"
-      >
-        <div class="space-y-0.5">
-          <span
-            class="text-[11px] font-black text-amber-700 uppercase tracking-wider flex items-center gap-1.5"
-          >
-            <span
-              class="w-1.5 h-1.5 rounded-full bg-amber-500 animate-ping"
-            ></span
-            >10% SEMI-ANNUAL SAVINGS
-          </span>
-          <p class="text-[10px] text-slate-500 font-bold leading-normal">
-            Save
-            <strong class="text-slate-900 font-black">$48.00 instantly</strong>.
-            Price automatically reduced to
-            <strong class="text-amber-600 font-black">$432</strong> at checkout.
-          </p>
-        </div>
+      <div>
         <div
-          class="bg-amber-500 text-slate-950 font-black text-[10px] px-2.5 py-1.5 rounded-lg shrink-0 tracking-tighter"
+          class="bg-gradient-to-r from-amber-500/10 to-amber-600/5 border border-amber-400/20 rounded-2xl p-3.5 mt-6 text-left shadow-sm flex items-center justify-between gap-3 group hover:border-amber-500 transition-colors"
         >
-          -$48
+          <div class="space-y-0.5">
+            <span
+              class="text-[11px] font-black text-amber-700 uppercase tracking-wider flex items-center gap-1.5"
+            >
+              <span
+                class="w-1.5 h-1.5 rounded-full bg-amber-500 animate-ping"
+              ></span
+              >10% SEMI-ANNUAL SAVINGS
+            </span>
+            <p class="text-[10px] text-slate-500 font-bold leading-normal">
+              Price reduced from $480 to
+              <strong class="text-amber-600 font-black">$432</strong> at
+              checkout.
+            </p>
+          </div>
+          <div
+            class="bg-amber-500 text-slate-950 font-black text-[10px] px-2.5 py-1.5 rounded-lg shrink-0 tracking-tighter shadow-sm"
+          >
+            -$48
+          </div>
         </div>
+        <span class="text-xs font-bold text-amber-600 mt-4 block text-right">
+          Select Plan <i class="fa-solid fa-arrow-down ml-1"></i>
+        </span>
       </div>
     </div>
 
-    <div class="flex flex-col justify-between">
-      <div
-        id="card-prop-platinum"
-        onclick="
-          activatePlanFlow(
-            'Property Platinum ($960 / 12 Months - $80 USD / Month)',
-            'prop-platinum',
-          )
-        "
-        class="premium-card bg-white p-8 rounded-3xl flex flex-col justify-between h-full cursor-pointer border-t-4 border-t-slate-900"
-      >
-        <div>
+    <!-- Property Platinum Plan -->
+    <div
+      id="card-prop-platinum"
+      onclick="
+        activatePlanFlow(
+          'Property Platinum ($720 / 12 Months - $60 USD / Month equivalent)',
+          'prop-platinum',
+        )
+      "
+      class="premium-card bg-white p-8 rounded-3xl flex flex-col justify-between cursor-pointer border-t-4 border-t-slate-900 shadow-md"
+    >
+      <div>
+        <div class="flex justify-between items-center">
           <h4
             class="font-black text-slate-900 text-[10px] uppercase tracking-widest"
           >
             Property Care • 12 Months
           </h4>
-          <h3
-            class="font-black text-slate-950 text-xl mt-1 uppercase tracking-wider"
+          <span
+            class="inline-flex items-center gap-1 bg-slate-950 text-amber-450 text-amber-400 text-[9px] font-black uppercase px-2 py-0.5 rounded-md shadow-sm"
           >
-            Platinum Plan
-          </h3>
-          <div class="text-4xl font-black text-slate-900 my-4.5">
-            $960<span class="text-xs text-gray-400 font-normal">
-              USD/12 MONTHS ($80/MONTH)</span
+            Save 25% (VIP)
+          </span>
+        </div>
+        <h3
+          class="font-black text-slate-950 text-xl mt-1.5 uppercase tracking-wider"
+        >
+          Platinum Plan
+        </h3>
+        <div class="my-4.5">
+          <div class="flex items-baseline gap-2">
+            <span class="text-4xl font-black text-slate-900">$720</span>
+            <span class="text-sm font-bold text-gray-400 line-through"
+              >$960</span
+            >
+            <span
+              class="text-[10px] text-emerald-700 font-black bg-emerald-100/80 px-2 py-0.5 rounded-md"
+            >
+              SAVE $240
+            </span>
+          </div>
+          <div class="text-[11px] text-gray-500 font-bold mt-1 uppercase">
+            USD/12 MONTHS
+            <span class="text-slate-400 font-medium lowercase"
+              >($60/month equivalent)</span
             >
           </div>
-          <p class="text-xs text-gray-500 font-medium leading-relaxed">
-            Premium legal property boundary checks to prevent encroachment, full
-            documentation verification, and priority damage-control
-            coordination.
-          </p>
+        </div>
+        <p class="text-xs text-gray-500 font-medium leading-relaxed">
+          Premium legal property boundary checks to prevent encroachment, full
+          documentation verification, and priority damage-control coordination.
+        </p>
+      </div>
+      <div>
+        <div
+          class="bg-slate-950 border border-slate-800 rounded-2xl p-3.5 mt-6 text-left shadow-md flex items-center justify-between gap-3 relative overflow-hidden"
+        >
+          <div
+            class="absolute -right-4 -bottom-4 text-slate-900 font-black text-5xl select-none pointer-events-none tracking-tighter"
+          >
+            25%
+          </div>
+          <div class="space-y-0.5 relative z-10">
+            <span
+              class="text-[11px] font-black text-amber-400 uppercase tracking-wider flex items-center gap-1.5"
+            >
+              <i class="fa-solid fa-bolt text-xs animate-bounce"></i>25% ANNUAL
+              VIP SAVINGS
+            </span>
+            <p class="text-[10px] text-slate-400 font-medium leading-normal">
+              Price reduced from $960 to
+              <strong class="text-amber-400 font-black">$720</strong> at
+              checkout.
+            </p>
+          </div>
+          <div
+            class="bg-gradient-to-r from-amber-400 to-amber-500 text-slate-950 font-black text-[10px] px-2.5 py-1.5 rounded-lg shrink-0 z-10 shadow-sm"
+          >
+            -$240
+          </div>
         </div>
         <span
-          class="text-xs font-bold text-slate-950 mt-6 block text-right font-black"
-          >Select Plan <i class="fa-solid fa-arrow-down ml-1"></i
-        ></span>
-      </div>
-      <div
-        class="bg-slate-950 border border-slate-800 rounded-2xl p-3.5 mt-3 text-left shadow-md flex items-center justify-between gap-3 relative overflow-hidden"
-      >
-        <div
-          class="absolute -right-4 -bottom-4 text-slate-900 font-black text-5xl select-none pointer-events-none tracking-tighter"
+          class="text-xs font-bold text-slate-950 mt-4 block text-right font-black"
         >
-          25%
-        </div>
-        <div class="space-y-0.5 relative z-10">
-          <span
-            class="text-[11px] font-black text-amber-400 uppercase tracking-wider flex items-center gap-1.5"
-          >
-            <i class="fa-solid fa-bolt text-xs animate-bounce"></i>25% ANNUAL
-            VIP SAVINGS
-          </span>
-          <p class="text-[10px] text-slate-400 font-medium leading-normal">
-            Save a massive
-            <strong class="text-white font-black">$240.00 right now</strong>.
-            Price reduced from $960 to
-            <strong class="text-amber-400 font-black">$720</strong> at checkout.
-          </p>
-        </div>
-        <div
-          class="bg-gradient-to-r from-amber-400 to-amber-500 text-slate-950 font-black text-[10px] px-2.5 py-1.5 rounded-lg shrink-0 z-10 shadow-sm"
-        >
-          -$240
-        </div>
+          Select Plan <i class="fa-solid fa-arrow-down ml-1"></i>
+        </span>
       </div>
     </div>
   </div>
@@ -207,179 +249,216 @@
   </div>
 
   <div class="grid grid-cols-1 md:grid-cols-3 gap-10 items-stretch">
-    <div class="flex flex-col justify-between">
-      <div
-        id="card-parent-silver"
-        onclick="
-          activatePlanFlow(
-            'Parental Silver ($149 USD / Month)',
-            'parent-silver',
-          )
-        "
-        class="premium-card bg-white border border-gray-200 p-8 rounded-3xl flex flex-col justify-between h-full cursor-pointer border-t-4 border-t-slate-400 relative"
-      >
-        <div>
-          <h4
-            class="font-black text-slate-400 text-[10px] uppercase tracking-widest"
-          >
-            Parental Care • 1 Month
-          </h4>
-          <h3
-            class="font-black text-slate-950 text-xl mt-1 uppercase tracking-wider"
-          >
-            Silver Pro Plan
-          </h3>
-          <div class="text-4xl font-black text-slate-900 my-4.5">
-            $149<span class="text-xs text-gray-400 font-normal">
-              USD/MONTH</span
-            >
-          </div>
-          <p class="text-xs text-gray-500 font-medium leading-relaxed">
-            Local bank account updates, physical passbook printing services,
-            utility bill management, and pantry ration checks.
-          </p>
+    <!-- Parental Silver Plan -->
+    <div
+      id="card-parent-silver"
+      onclick="
+        activatePlanFlow('Parental Silver ($149 USD / Month)', 'parent-silver')
+      "
+      class="premium-card bg-white border border-gray-200 p-8 rounded-3xl flex flex-col justify-between cursor-pointer border-t-4 border-t-slate-400 relative"
+    >
+      <div>
+        <h4
+          class="font-black text-slate-400 text-[10px] uppercase tracking-widest"
+        >
+          Parental Care • 1 Month
+        </h4>
+        <h3
+          class="font-black text-slate-950 text-xl mt-1 uppercase tracking-wider"
+        >
+          Silver Pro Plan
+        </h3>
+        <div class="text-4xl font-black text-slate-900 my-4.5">
+          $149<span class="text-xs text-gray-400 font-normal"> USD/MONTH</span>
         </div>
-        <span class="text-xs font-bold text-blue-600 mt-6 block text-right"
-          >Select Plan <i class="fa-solid fa-arrow-down ml-1"></i
-        ></span>
+        <p class="text-xs text-gray-500 font-medium leading-relaxed">
+          Local bank account updates, physical passbook printing services,
+          utility bill management, and pantry ration checks.
+        </p>
       </div>
-      <div
-        class="bg-slate-100/80 rounded-xl px-4 py-2.5 mt-3 text-center text-[10px] font-bold text-slate-500 tracking-wide"
-      >
-        Flexible Monthly Support Plan
+      <div>
+        <div
+          class="bg-slate-100/80 rounded-xl px-4 py-2.5 mt-6 text-center text-[10px] font-bold text-slate-500 tracking-wide"
+        >
+          Flexible Monthly Support Plan
+        </div>
+        <span class="text-xs font-bold text-blue-600 mt-4 block text-right">
+          Select Plan <i class="fa-solid fa-arrow-down ml-1"></i>
+        </span>
       </div>
     </div>
 
-    <div class="flex flex-col justify-between">
-      <div
-        id="card-parent-gold"
-        onclick="
-          activatePlanFlow(
-            'Parental Gold ($894 / 6 Months - $149 USD / Month)',
-            'parent-gold',
-          )
-        "
-        class="premium-card bg-white border border-gray-200 p-8 rounded-3xl flex flex-col justify-between h-full cursor-pointer border-t-4 border-t-blue-500"
-      >
-        <div>
+    <!-- Parental Gold Plan -->
+    <div
+      id="card-parent-gold"
+      onclick="
+        activatePlanFlow(
+          'Parental Gold ($804 / 6 Months - $134 USD / Month equivalent)',
+          'parent-gold',
+        )
+      "
+      class="premium-card bg-white border border-gray-200 p-8 rounded-3xl flex flex-col justify-between cursor-pointer border-t-4 border-t-blue-500"
+    >
+      <div>
+        <div class="flex justify-between items-center">
           <h4
-            class="font-black text-blue-600 text-[10px] uppercase tracking-widest"
+            class="font-black text-blue-650 text-[10px] uppercase tracking-widest text-blue-600"
           >
             Parental Care • 6 Months
           </h4>
-          <h3
-            class="font-black text-slate-950 text-xl mt-1 uppercase tracking-wider"
+          <span
+            class="inline-flex items-center gap-1 bg-amber-500 text-slate-950 text-[9px] font-black uppercase px-2 py-0.5 rounded-md shadow-sm"
           >
-            Gold Pro Plan
-          </h3>
-          <div class="text-4xl font-black text-slate-900 my-4.5">
-            $894<span class="text-xs text-gray-400 font-normal">
-              USD/6 MONTHS ($149/MONTH)</span
+            Save 10%
+          </span>
+        </div>
+        <h3
+          class="font-black text-slate-950 text-xl mt-1.5 uppercase tracking-wider"
+        >
+          Gold Pro Plan
+        </h3>
+        <div class="my-4.5">
+          <div class="flex items-baseline gap-2">
+            <span class="text-4xl font-black text-slate-900">$804</span>
+            <span class="text-sm font-bold text-gray-400 line-through"
+              >$894</span
+            >
+            <span
+              class="text-[10px] text-emerald-700 font-black bg-emerald-100/80 px-2 py-0.5 rounded-md"
+            >
+              SAVE $90
+            </span>
+          </div>
+          <div class="text-[11px] text-gray-500 font-bold mt-1 uppercase">
+            USD/6 MONTHS
+            <span class="text-slate-400 font-medium lowercase"
+              >($134/month equivalent)</span
             >
           </div>
-          <p class="text-xs text-gray-500 font-medium leading-relaxed">
-            Home grocery deliveries, technical support for WiFi/tablet setups,
-            wellness checkups, and prescription refill coordination.
-          </p>
         </div>
-        <span class="text-xs font-bold text-blue-600 mt-6 block text-right"
-          >Select Plan <i class="fa-solid fa-arrow-down ml-1"></i
-        ></span>
+        <p class="text-xs text-gray-500 font-medium leading-relaxed">
+          Home grocery deliveries, technical support for WiFi/tablet setups,
+          wellness checkups, and prescription refill coordination.
+        </p>
       </div>
-      <div
-        class="bg-gradient-to-r from-amber-500/10 to-amber-600/5 border border-amber-400/30 rounded-2xl p-3.5 mt-3 text-left shadow-sm flex items-center justify-between gap-3 group hover:border-amber-500 transition-all"
-      >
-        <div class="space-y-0.5">
-          <span
-            class="text-[11px] font-black text-amber-800 uppercase tracking-wider flex items-center gap-1.5"
-          >
-            <i
-              class="fa-solid fa-circle-nodes animate-spin text-xs"
-              style="animation-duration: 3s"
-            ></i
-            >10% SEMI-ANNUAL SAVINGS
-          </span>
-          <p class="text-[10px] text-slate-500 font-bold leading-normal">
-            Save exactly
-            <strong class="text-slate-900 font-black"
-              >$89.40 out-of-pocket</strong
-            >. Billed at
-            <strong class="text-amber-600 font-black">$804</strong> at checkout.
-          </p>
-        </div>
+      <div>
         <div
-          class="bg-amber-500 text-slate-950 font-black text-[10px] px-2.5 py-1.5 rounded-lg shrink-0 shadow-sm"
+          class="bg-gradient-to-r from-amber-500/10 to-amber-600/5 border border-amber-400/30 rounded-2xl p-3.5 mt-6 text-left shadow-sm flex items-center justify-between gap-3 group hover:border-amber-500 transition-all"
         >
-          -$89
+          <div class="space-y-0.5">
+            <span
+              class="text-[11px] font-black text-amber-800 uppercase tracking-wider flex items-center gap-1.5"
+            >
+              <i
+                class="fa-solid fa-circle-nodes animate-spin text-xs"
+                style="animation-duration: 3s"
+              ></i
+              >10% SEMI-ANNUAL SAVINGS
+            </span>
+            <p class="text-[10px] text-slate-500 font-bold leading-normal">
+              Price reduced from $894 to
+              <strong class="text-amber-600 font-black">$804</strong> at
+              checkout.
+            </p>
+          </div>
+          <div
+            class="bg-amber-500 text-slate-950 font-black text-[10px] px-2.5 py-1.5 rounded-lg shrink-0 shadow-sm"
+          >
+            -$90
+          </div>
         </div>
+        <span class="text-xs font-bold text-blue-600 mt-4 block text-right">
+          Select Plan <i class="fa-solid fa-arrow-down ml-1"></i>
+        </span>
       </div>
     </div>
 
-    <div class="flex flex-col justify-between">
-      <div
-        id="card-parent-platinum"
-        onclick="
-          activatePlanFlow(
-            'Parental Platinum ($1788 / 12 Months - $149 USD / Month)',
-            'parent-platinum',
-          )
-        "
-        class="premium-card bg-white p-8 rounded-3xl flex flex-col justify-between h-full cursor-pointer border-2 best-value-card relative shadow-md"
-      >
-        <div>
+    <!-- Parental Platinum Plan -->
+    <div
+      id="card-parent-platinum"
+      onclick="
+        activatePlanFlow(
+          'Parental Platinum ($1341 / 12 Months - $111.75 USD / Month equivalent)',
+          'parent-platinum',
+        )
+      "
+      class="premium-card bg-white p-8 rounded-3xl flex flex-col justify-between cursor-pointer border-2 best-value-card relative shadow-md"
+    >
+      <div>
+        <div class="flex justify-between items-center">
           <h4
             class="font-black text-blue-600 text-[10px] uppercase tracking-widest"
           >
             Parental Care • 12 Months
           </h4>
-          <h3
-            class="font-black text-slate-950 text-xl mt-1 uppercase tracking-wider"
+          <span
+            class="inline-flex items-center gap-1 bg-emerald-500 text-white text-[9px] font-black uppercase px-2 py-0.5 rounded-md shadow-sm animate-pulse"
           >
-            Platinum Pro Plan
-          </h3>
-          <div class="text-4xl font-black text-blue-600 my-4.5">
-            $1788<span class="text-xs text-gray-400 font-normal">
-              USD/12 MONTHS ($149/MONTH)</span
+            Save 25% (VIP)
+          </span>
+        </div>
+        <h3
+          class="font-black text-slate-950 text-xl mt-1.5 uppercase tracking-wider"
+        >
+          Platinum Pro Plan
+        </h3>
+        <div class="my-4.5">
+          <div class="flex items-baseline gap-2">
+            <span class="text-4xl font-black text-blue-600">$1,341</span>
+            <span class="text-sm font-bold text-gray-400 line-through"
+              >$1,788</span
+            >
+            <span
+              class="text-[10px] text-emerald-700 font-black bg-emerald-100/80 px-2 py-0.5 rounded-md"
+            >
+              SAVE $447
+            </span>
+          </div>
+          <div class="text-[11px] text-blue-650 font-bold mt-1 uppercase">
+            USD/12 MONTHS
+            <span class="text-slate-400 font-medium lowercase"
+              >($111.75/month equivalent)</span
             >
           </div>
-          <p class="text-xs text-gray-500 font-medium leading-relaxed">
-            Year-round care coordination, bilingual emergency support routing,
-            and real-time status updates directly via WhatsApp.
-          </p>
+        </div>
+        <p class="text-xs text-gray-500 font-medium leading-relaxed">
+          Year-round care coordination, bilingual emergency support routing, and
+          real-time status updates directly via WhatsApp.
+        </p>
+      </div>
+      <div>
+        <div
+          class="bg-gradient-to-r from-blue-600 to-indigo-700 text-white rounded-2xl p-3.5 mt-6 text-left shadow-lg flex items-center justify-between gap-3 border border-blue-400/20 relative overflow-hidden group"
+        >
+          <div
+            class="absolute -right-2 -bottom-2 text-blue-700/30 font-black text-5xl select-none pointer-events-none"
+          >
+            <i class="fa-solid fa-star"></i>
+          </div>
+          <div class="space-y-0.5 relative z-10">
+            <span
+              class="text-[11px] font-black text-amber-400 uppercase tracking-wider flex items-center gap-1.5 animate-pulse"
+            >
+              <i class="fa-solid fa-star-half-stroke"></i>MAX DIASPORA DISCOUNT
+              (25% OFF)
+            </span>
+            <p class="text-[10px] text-blue-100 font-semibold leading-normal">
+              Price reduced from $1788 to
+              <strong class="text-amber-400 font-black">$1341 total</strong> at
+              checkout.
+            </p>
+          </div>
+          <div
+            class="bg-white text-blue-700 font-black text-[11px] px-2.5 py-1.5 rounded-lg shrink-0 z-10 shadow-md transform group-hover:scale-105 transition-transform"
+          >
+            -$447
+          </div>
         </div>
         <span
-          class="text-xs font-bold text-blue-600 mt-6 block text-right font-black"
-          >Select Plan <i class="fa-solid fa-arrow-down ml-1"></i
-        ></span>
-      </div>
-      <div
-        class="bg-gradient-to-r from-blue-600 to-indigo-700 text-white rounded-2xl p-3.5 mt-3 text-left shadow-lg flex items-center justify-between gap-3 border border-blue-400/20 relative overflow-hidden group"
-      >
-        <div
-          class="absolute -right-2 -bottom-2 text-blue-700/30 font-black text-5xl select-none pointer-events-none"
+          class="text-xs font-bold text-blue-600 mt-4 block text-right font-black"
         >
-          <i class="fa-solid fa-star"></i>
-        </div>
-        <div class="space-y-0.5 relative z-10">
-          <span
-            class="text-[11px] font-black text-amber-400 uppercase tracking-wider flex items-center gap-1.5 animate-pulse"
-          >
-            <i class="fa-solid fa-star-half-stroke"></i>MAX DIASPORA DISCOUNT
-            (25% OFF)
-          </span>
-          <p class="text-[10px] text-blue-100 font-semibold leading-normal">
-            Save a massive
-            <strong class="text-white font-black">$447.00 block value</strong>.
-            Yearly lock-in price reduced to
-            <strong class="text-amber-400 font-black">$1341 total</strong> at
-            checkout.
-          </p>
-        </div>
-        <div
-          class="bg-white text-blue-700 font-black text-[11px] px-2.5 py-1.5 rounded-lg shrink-0 z-10 shadow-md transform group-hover:scale-105 transition-transform"
-        >
-          -$447
-        </div>
+          Select Plan <i class="fa-solid fa-arrow-down ml-1"></i>
+        </span>
       </div>
     </div>
   </div>
