@@ -369,6 +369,22 @@
         }, 150);
       }
 
+      function toggleFaq(faqIndex) {
+        const answerNode = document.getElementById("faq-answer-" + faqIndex);
+        const iconNode = document.getElementById("faq-icon-" + faqIndex);
+        if (!answerNode || !iconNode) return;
+
+        if (answerNode.classList.contains("hidden")) {
+          answerNode.classList.remove("hidden");
+          iconNode.classList.remove("rotate-0");
+          iconNode.classList.add("rotate-180");
+        } else {
+          answerNode.classList.add("hidden");
+          iconNode.classList.remove("rotate-180");
+          iconNode.classList.add("rotate-0");
+        }
+      }
+
       function activatePlanFlow(planName, typeKey) {
         // Define metadata dictionary for detailed plans
         const planDetails = {

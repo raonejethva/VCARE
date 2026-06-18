@@ -266,3 +266,178 @@
     </div>
   </div>
 </section>
+
+<!-- FAQ Section -->
+<section class="py-24 px-6 bg-slate-900 text-white border-t border-slate-800">
+  <div class="max-w-4xl mx-auto space-y-12">
+    <!-- Header -->
+    <div class="text-center space-y-3">
+      <span class="text-xs uppercase tracking-widest font-black text-amber-500"
+        >Frequently Asked Questions</span
+      >
+      <h2 class="text-3xl sm:text-4xl font-black tracking-tight">
+        <span class="text-en">Common Inquiries & Operational Details</span>
+        <span class="text-gu">વારંવાર પૂછાતા પ્રશ્નો અને જવાબો</span>
+      </h2>
+    </div>
+
+    <!-- Accordion Grid -->
+    <div class="space-y-4">
+      <!-- FAQ 1 -->
+      <div
+        class="bg-slate-950/60 border border-slate-800 rounded-2xl overflow-hidden transition-all hover:border-slate-700"
+      >
+        <button
+          onclick="toggleFaq(1)"
+          class="w-full py-5 px-6 flex justify-between items-center text-left gap-4 hover:text-amber-400 transition-colors focus:outline-none"
+        >
+          <span class="text-sm sm:text-base font-black tracking-wide">
+            <span class="text-en"
+              >How quickly do you respond in medical emergencies?</span
+            >
+            <span class="text-gu"
+              >મેડિકલ ઇમરજન્સીના સમયે તમારી પ્રતિક્રિયા કેટલી ઝડપી હોય છે?</span
+            >
+          </span>
+          <i
+            id="faq-icon-1"
+            class="fa-solid fa-chevron-down text-xs text-amber-500 transition-transform duration-300 rotate-0"
+          ></i>
+        </button>
+        <div
+          id="faq-answer-1"
+          class="hidden px-6 pb-6 border-t border-slate-800/40 pt-4 text-xs sm:text-sm text-slate-300 leading-relaxed font-medium"
+        >
+          <span class="text-en"
+            >Our ground response team operates directly out of Visnagar. In any
+            urgent medical situation, our representative will physically reach
+            your parents' home to coordinate quick ambulance dispatch and
+            hospital admission routing.</span
+          >
+          <span class="text-gu"
+            >અમારી ઓન-ગ્રાઉન્ડ ટીમ વિસનગરમાં જ કાર્યરત છે. કોઈ પણ કટોકટી કે
+            મેડિકલ ઇમરજન્સીના સમયે, અમારા પ્રતિનિધિ તાત્કાલિક રૂબરૂ પહોંચી
+            એમ્બ્યુલન્સ અને હોસ્પિટલમાં દાખલ થવાની વ્યવસ્થા ગોઠવશે.</span
+          >
+        </div>
+      </div>
+
+      <!-- FAQ 2 -->
+      <div
+        class="bg-slate-950/60 border border-slate-800 rounded-2xl overflow-hidden transition-all hover:border-slate-700"
+      >
+        <button
+          onclick="toggleFaq(2)"
+          class="w-full py-5 px-6 flex justify-between items-center text-left gap-4 hover:text-amber-400 transition-colors focus:outline-none"
+        >
+          <span class="text-sm sm:text-base font-black tracking-wide">
+            <span class="text-en"
+              >Can I modify or pause the subscription/retainer plan at any
+              time?</span
+            >
+            <span class="text-gu"
+              >શું હું સબસ્ક્રિપ્શન/પ્લાન ગમે ત્યારે બદલી કે અટકાવી શકું?</span
+            >
+          </span>
+          <i
+            id="faq-icon-2"
+            class="fa-solid fa-chevron-down text-xs text-amber-500 transition-transform duration-300 rotate-0"
+          ></i>
+        </button>
+        <div
+          id="faq-answer-2"
+          class="hidden px-6 pb-6 border-t border-slate-800/40 pt-4 text-xs sm:text-sm text-slate-300 leading-relaxed font-medium"
+        >
+          <span class="text-en"
+            >Yes, absolutely. Our Silver plans are month-to-month with no
+            long-term contracts. For discounted 6-month or 12-month plans, you
+            can easily transition or pause services by contacting our WhatsApp
+            support.</span
+          >
+          <span class="text-gu"
+            >હા, ચોક્કસ. અમારો સિલ્વર પ્લાન મંથ-ટુ-મંથ છે અને કોઈ બોન્ડ કે લાંબો
+            કોન્ટ્રાક્ટ નથી. ગોલ્ડ કે પ્લેટિનમ પ્લાનને પણ તમે વોટ્સએપ હેલ્પલાઇન
+            દ્વારા સરળતાથી બદલી કે મોકૂફ રાખી શકો છો.</span
+          >
+        </div>
+      </div>
+
+      <!-- FAQ 3 -->
+      <div
+        class="bg-slate-950/60 border border-slate-800 rounded-2xl overflow-hidden transition-all hover:border-slate-700"
+      >
+        <button
+          onclick="toggleFaq(3)"
+          class="w-full py-5 px-6 flex justify-between items-center text-left gap-4 hover:text-amber-400 transition-colors focus:outline-none"
+        >
+          <span class="text-sm sm:text-base font-black tracking-wide">
+            <span class="text-en"
+              >What verification details do your ground representatives
+              have?</span
+            >
+            <span class="text-gu"
+              >મુલાકાત લેનાર પ્રતિનિધિઓ પાસે કઈ સત્તાવાર માહિતી અને સુરક્ષા
+              ટ્રેકિંગ હોય છે?</span
+            >
+          </span>
+          <i
+            id="faq-icon-3"
+            class="fa-solid fa-chevron-down text-xs text-amber-500 transition-transform duration-300 rotate-0"
+          ></i>
+        </button>
+        <div
+          id="faq-answer-3"
+          class="hidden px-6 pb-6 border-t border-slate-800/40 pt-4 text-xs sm:text-sm text-slate-300 leading-relaxed font-medium"
+        >
+          <span class="text-en"
+            >Every Vatan Care team member is police-verified and
+            background-checked. When visiting parents or properties, they carry
+            official ID badges and check-ins are logged with parents.</span
+          >
+          <span class="text-gu"
+            >વતન કેરના દરેક ટીમ મેમ્બર સંપૂર્ણ પોલીસ વેરીફાઈડ અને બેકગ્રાઉન્ડ
+            ચેક થયેલા છે. મુલાકાત સમયે તેઓ ઓફિશિયલ આઈડી કાર્ડ સાથે જ આવશે.</span
+          >
+        </div>
+      </div>
+
+      <!-- FAQ 4 -->
+      <div
+        class="bg-slate-950/60 border border-slate-800 rounded-2xl overflow-hidden transition-all hover:border-slate-700"
+      >
+        <button
+          onclick="toggleFaq(4)"
+          class="w-full py-5 px-6 flex justify-between items-center text-left gap-4 hover:text-amber-400 transition-colors focus:outline-none"
+        >
+          <span class="text-sm sm:text-base font-black tracking-wide">
+            <span class="text-en"
+              >How do I receive property reports and checkup updates?</span
+            >
+            <span class="text-gu"
+              >મને મિલકતના રિપોર્ટ્સ અને મુલાકાતની અપડેટ કેવી રીતે મળશે?</span
+            >
+          </span>
+          <i
+            id="faq-icon-4"
+            class="fa-solid fa-chevron-down text-xs text-amber-500 transition-transform duration-300 rotate-0"
+          ></i>
+        </button>
+        <div
+          id="faq-answer-4"
+          class="hidden px-6 pb-6 border-t border-slate-800/40 pt-4 text-xs sm:text-sm text-slate-300 leading-relaxed font-medium"
+        >
+          <span class="text-en"
+            >After each scheduled property checkup or parental visit, you will
+            receive a detailed photo and video update directly on WhatsApp,
+            along with municipal tax and utility receipt scans.</span
+          >
+          <span class="text-gu"
+            >દરેક મુલાકાત કે પ્રોપર્ટી ચેકઅપ પછી, વતન કેર દ્વારા ફોટા અને
+            વિડિયોનો લાઈવ રિપોર્ટ સીધો જ તમારા વોટ્સએપ પર મોકલવામાં આવશે, જેમાં
+            ટેક્સ કે બિલની પહોંચ શામેલ હશે.</span
+          >
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
