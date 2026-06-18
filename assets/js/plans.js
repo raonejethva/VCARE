@@ -12,35 +12,149 @@ let currentSelectedPlan = "";
  * @param {string} typeKey - Plan type key (e.g., 'prop-silver')
  */
 function activatePlanFlow(planName, typeKey) {
-  currentSelectedPlan = planName;
-
-  // Update plan title
-  const planTitleNode = getElement("target-plan-title");
-  if (planTitleNode) {
-    planTitleNode.innerHTML = `<i class="fa-solid fa-box-open text-amber-500 mr-2"></i> ${escapeHtml(planName)}`;
-  }
-
-  const discountNode = getElement("target-plan-discount");
-  const discountText = getElement("discount-text-value");
-
-  const discounts = {
-    "prop-gold":
-      "10% Semi-Annual Savings Applied! Final checkout total drops to $432 (Save $48)",
-    "prop-platinum":
-      "25% Annual VIP Savings Applied! Final checkout total drops to $720 (Save $240)",
-    "parent-gold":
-      "10% Semi-Annual Savings Applied! Final checkout total drops to $804 (Save $90)",
-    "parent-platinum":
-      "25% Annual VIP Savings Applied! Final checkout total drops to $1341 (Save $447)",
+  // Define metadata dictionary for detailed plans
+  const planDetails = {
+    "prop-silver": {
+      name: "Property Care - Silver Plan",
+      price: 80,
+      originalPrice: 80,
+      duration: "1 Month",
+      savings: 0,
+      savingsPercent: 0,
+      monthlyEquivalent: 80,
+    },
+    "prop-gold": {
+      name: "Property Care - Gold Plan",
+      price: 432,
+      originalPrice: 480,
+      duration: "6 Months",
+      savings: 48,
+      savingsPercent: 10,
+      monthlyEquivalent: 72,
+    },
+    "prop-platinum": {
+      name: "Property Care - Platinum Plan",
+      price: 720,
+      originalPrice: 960,
+      duration: "12 Months",
+      savings: 240,
+      savingsPercent: 25,
+      monthlyEquivalent: 60,
+    },
+    "parent-silver": {
+      name: "Parental Care - Silver Pro Plan",
+      price: 149,
+      originalPrice: 149,
+      duration: "1 Month",
+      savings: 0,
+      savingsPercent: 0,
+      monthlyEquivalent: 149,
+    },
+    "parent-gold": {
+      name: "Parental Care - Gold Pro Plan",
+      price: 804,
+      originalPrice: 894,
+      duration: "6 Months",
+      savings: 90,
+      savingsPercent: 10,
+      monthlyEquivalent: 134,
+    },
+    "parent-platinum": {
+      name: "Parental Care - Platinum Pro Plan",
+      price: 1341,
+      originalPrice: 1788,
+      duration: "12 Months",
+      savings: 447,
+      savingsPercent: 25,
+      monthlyEquivalent: 111.75,
+    },
   };
 
-  if (discountNode && discountText) {
-    if (discounts[typeKey]) {
-      discountText.innerText = discounts[typeKey];
-      discountNode.classList.remove("hidden");
+  const plan = planDetails[typeKey] || {
+    name: planName,
+    price: 80,
+    originalPrice: 80,
+    duration: "Month",
+    savings: 0,
+    savingsPercent: 0,
+    monthlyEquivalent: 80,
+  };
+
+  // Set the selection state
+  if (plan.savings > 0) {
+    currentSelectedPlan = `${plan.name} (${plan.duration} - Billed $${plan.price} USD - Saved $${plan.savings})`;
+  } else {
+    currentSelectedPlan = `${plan.name} ($${plan.price} USD / ${plan.duration})`;
+  }
+
+  // Dynamically build the header
+  const headerNode = getElement("interactive-plan-header");
+  if (headerNode) {
+    let savingsMarkup = "";
+    if (plan.savings > 0) {
+      savingsMarkup = `
+        <div class="bg-emerald-500 text-slate-950 rounded-xl p-3.5 space-y-1 shadow-sm flex flex-col justify-between shrink-0">
+          <span class="text-[9px] text-emerald-950 font-black uppercase tracking-wider block">Immediate Savings</span>
+          <div class="flex items-center gap-1.5">
+            <span class="text-xl font-black">Save $${plan.savings}</span>
+            <span class="px-1.5 py-0.5 bg-slate-950 text-amber-400 text-[8px] font-black uppercase rounded">${plan.savingsPercent}% OFF</span>
+          </div>
+        </div>
+      `;
     } else {
-      discountNode.classList.add("hidden");
+      savingsMarkup = `
+        <div class="bg-white/5 border border-white/10 text-slate-400 rounded-xl p-3.5 space-y-1 flex flex-col justify-between shrink-0">
+          <span class="text-[9px] text-slate-400 font-bold uppercase tracking-wider block">Savings Applied</span>
+          <div class="text-xs font-extrabold flex items-center gap-1.5 py-1">
+            <i class="fa-solid fa-check text-emerald-500"></i> Standard Rate
+          </div>
+        </div>
+      `;
     }
+
+    headerNode.innerHTML = `
+      <div class="w-full space-y-5">
+        <!-- Plan Header Metadata -->
+        <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-3 pb-3 border-b border-white/10">
+          <div class="space-y-1">
+            <span class="text-[9px] text-amber-400 font-black tracking-widest uppercase block flex items-center gap-1">
+              <i class="fa-solid fa-fingerprint animate-pulse"></i> ACTIVE REGISTRATION
+            </span>
+            <h3 class="text-lg sm:text-xl font-black text-white tracking-tight flex items-center gap-2">
+              <i class="fa-solid fa-box-open text-amber-500"></i> ${plan.name}
+            </h3>
+          </div>
+          <span class="px-3 py-1 bg-amber-500 text-slate-950 font-black text-[9px] uppercase tracking-wider rounded-md shadow-sm">
+            ${plan.duration} Contract
+          </span>
+        </div>
+
+        <!-- Metrics Breakdown -->
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+          <!-- Billed Total -->
+          <div class="bg-white/5 border border-white/10 rounded-xl p-3.5 space-y-1">
+            <span class="text-[9px] text-slate-400 font-bold uppercase tracking-wider block">Final Billed Total</span>
+            <div class="flex items-baseline gap-1.5">
+              <span class="text-2xl font-black text-white">$${plan.price}</span>
+              <span class="text-xs text-slate-400 font-semibold">USD</span>
+              ${plan.savings > 0 ? `<span class="text-[10px] text-slate-500 line-through font-semibold ml-1">$${plan.originalPrice}</span>` : ""}
+            </div>
+          </div>
+
+          <!-- Savings Card -->
+          ${savingsMarkup}
+
+          <!-- Equivalent monthly -->
+          <div class="bg-white/5 border border-white/10 rounded-xl p-3.5 space-y-1">
+            <span class="text-[9px] text-slate-400 font-bold uppercase tracking-wider block">Effective Monthly Rate</span>
+            <div class="flex items-baseline gap-1">
+              <span class="text-2xl font-black text-white">$${plan.monthlyEquivalent}</span>
+              <span class="text-[10px] text-slate-400 font-semibold lowercase">/month equivalent</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    `;
   }
 
   // Hide all service panels
