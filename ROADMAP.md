@@ -1,9 +1,11 @@
 # Project Roadmap
 
 ## Vision
+
 Build VCARE into a comprehensive, scalable platform for NRI property and parental care management with world-class user experience and reliable services.
 
 ## Current Status
+
 - **Phase:** Foundation & Documentation
 - **Version:** 1.0.0 (Initial Release)
 - **Last Updated:** 2026-06-11
@@ -13,6 +15,7 @@ Build VCARE into a comprehensive, scalable platform for NRI property and parenta
 ## Phase 1: Foundation (Q2 2026) ✅
 
 ### Completed
+
 - [x] Project setup and initialization
 - [x] Bilingual interface (EN/GU)
 - [x] Responsive design
@@ -24,6 +27,7 @@ Build VCARE into a comprehensive, scalable platform for NRI property and parenta
 - [x] Code quality tooling (ESLint/Prettier)
 
 ### In Progress
+
 - [ ] Extract CSS to separate files
 - [ ] Split JavaScript into modules
 - [ ] Optimize images and assets
@@ -34,6 +38,7 @@ Build VCARE into a comprehensive, scalable platform for NRI property and parenta
 ## Phase 2: Enhancement (Q3 2026)
 
 ### Quality & Testing
+
 - [ ] Unit test coverage > 80%
 - [ ] E2E test suite with Cypress
 - [ ] Integration tests
@@ -42,6 +47,7 @@ Build VCARE into a comprehensive, scalable platform for NRI property and parenta
 - [ ] Security penetration testing
 
 ### Features
+
 - [ ] Payment gateway integration (Stripe/PayPal)
 - [ ] User authentication system
 - [ ] Email notifications
@@ -50,6 +56,7 @@ Build VCARE into a comprehensive, scalable platform for NRI property and parenta
 - [ ] Analytics dashboard
 
 ### Performance
+
 - [ ] Image optimization (WebP)
 - [ ] CSS-in-JS optimization
 - [ ] Code splitting and lazy loading
@@ -61,6 +68,7 @@ Build VCARE into a comprehensive, scalable platform for NRI property and parenta
 ## Phase 3: Expansion (Q4 2026)
 
 ### New Services
+
 - [ ] Property maintenance tracking
 - [ ] Medical records management
 - [ ] Financial advisory services
@@ -68,6 +76,7 @@ Build VCARE into a comprehensive, scalable platform for NRI property and parenta
 - [ ] Insurance plan management
 
 ### Integrations
+
 - [ ] Google Maps integration
 - [ ] Calendar integration
 - [ ] File storage (Google Drive/Dropbox)
@@ -75,6 +84,7 @@ Build VCARE into a comprehensive, scalable platform for NRI property and parenta
 - [ ] Accounting software integration
 
 ### Mobile App
+
 - [ ] React Native mobile app
 - [ ] iOS app store release
 - [ ] Android app store release
@@ -86,6 +96,7 @@ Build VCARE into a comprehensive, scalable platform for NRI property and parenta
 ## Phase 4: Optimization (2027)
 
 ### Scaling
+
 - [ ] Multi-region deployment
 - [ ] Load balancing
 - [ ] Database optimization
@@ -93,6 +104,7 @@ Build VCARE into a comprehensive, scalable platform for NRI property and parenta
 - [ ] Caching strategy
 
 ### Advanced Features
+
 - [ ] AI-powered recommendations
 - [ ] Chatbot support
 - [ ] Video consultation
@@ -100,6 +112,7 @@ Build VCARE into a comprehensive, scalable platform for NRI property and parenta
 - [ ] AR property previews
 
 ### Business
+
 - [ ] Partner integrations
 - [ ] White-label solution
 - [ ] Enterprise API
@@ -111,24 +124,28 @@ Build VCARE into a comprehensive, scalable platform for NRI property and parenta
 ## Quarterly Milestones
 
 ### Q2 2026
+
 - Launch MVP with core features
 - Establish user base
 - Gather feedback
 - Publish documentation
 
 ### Q3 2026
+
 - Improve quality (tests, performance)
 - Add payment processing
 - Implement user accounts
 - Expand to 5 languages
 
 ### Q4 2026
+
 - Release mobile app
 - Add advanced features
 - Scale infrastructure
 - Achieve 10K users
 
 ### 2027 & Beyond
+
 - Expand to other cities
 - International expansion
 - Enterprise solutions
@@ -139,6 +156,7 @@ Build VCARE into a comprehensive, scalable platform for NRI property and parenta
 ## Technical Debt & Maintenance
 
 ### Code Quality
+
 - [ ] Refactor monolithic components
 - [ ] Implement design patterns
 - [ ] Improve error handling
@@ -146,6 +164,7 @@ Build VCARE into a comprehensive, scalable platform for NRI property and parenta
 - [ ] Add code documentation
 
 ### Dependencies
+
 - [ ] Regular security updates
 - [ ] Dependency audit monthly
 - [ ] Remove unused packages
@@ -153,6 +172,7 @@ Build VCARE into a comprehensive, scalable platform for NRI property and parenta
 - [ ] Migrate to modern libraries
 
 ### Infrastructure
+
 - [ ] Database migration planning
 - [ ] Backup strategy improvement
 - [ ] Disaster recovery testing
@@ -188,21 +208,22 @@ Build VCARE into a comprehensive, scalable platform for NRI property and parenta
 
 ## Success Metrics
 
-| Metric | Target | Current |
-|--------|--------|---------|
-| Lighthouse Score | 95+ | Pending |
-| Test Coverage | 80%+ | 0% |
-| Uptime | 99.9% | 100% |
-| Response Time | < 200ms | Pending |
-| Mobile Users | 60%+ | TBD |
-| User Satisfaction | 4.5/5 | TBD |
-| Page Load Time | < 2s | Pending |
+| Metric            | Target  | Current |
+| ----------------- | ------- | ------- |
+| Lighthouse Score  | 95+     | Pending |
+| Test Coverage     | 80%+    | 0%      |
+| Uptime            | 99.9%   | 100%    |
+| Response Time     | < 200ms | Pending |
+| Mobile Users      | 60%+    | TBD     |
+| User Satisfaction | 4.5/5   | TBD     |
+| Page Load Time    | < 2s    | Pending |
 
 ---
 
 ## Known Issues & Limitations
 
 ### Current
+
 - Logo file too large (6.5MB)
 - All code in single HTML file
 - No user authentication
@@ -210,6 +231,7 @@ Build VCARE into a comprehensive, scalable platform for NRI property and parenta
 - Limited language support
 
 ### Planned Fixes
+
 - Image optimization Q3 2026
 - Code modularization Q3 2026
 - User auth implementation Q3 2026
@@ -223,6 +245,7 @@ Build VCARE into a comprehensive, scalable platform for NRI property and parenta
 See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
 
 To work on roadmap items:
+
 1. Check GitHub Issues for tasks
 2. Comment on issue to claim it
 3. Create feature branch

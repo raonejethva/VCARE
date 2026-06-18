@@ -14,6 +14,7 @@ Thank you for your interest in contributing to VCARE! This document provides gui
 ## Development Guidelines
 
 ### Code Style
+
 - Use semantic HTML5 elements
 - Follow Tailwind CSS utility-first approach
 - Write clean, readable JavaScript
@@ -21,7 +22,9 @@ Thank you for your interest in contributing to VCARE! This document provides gui
 - Keep functions small and focused
 
 ### Commit Messages
+
 Use clear, descriptive commit messages:
+
 ```
 ✨ Add new feature description
 🐛 Fix bug description
@@ -31,6 +34,7 @@ Use clear, descriptive commit messages:
 ```
 
 ### Testing Before Submission
+
 - [ ] Test in multiple browsers (Chrome, Firefox, Safari, Edge)
 - [ ] Test responsive design (mobile, tablet, desktop)
 - [ ] Test both language modes (English & Gujarati)
@@ -40,6 +44,7 @@ Use clear, descriptive commit messages:
 ## Reporting Issues
 
 When reporting bugs, please include:
+
 - Clear description of the issue
 - Steps to reproduce
 - Expected behavior vs actual behavior
@@ -49,6 +54,7 @@ When reporting bugs, please include:
 ## Feature Requests
 
 When suggesting enhancements:
+
 - Explain the use case
 - Describe the proposed solution
 - Consider alternative approaches
@@ -57,6 +63,7 @@ When suggesting enhancements:
 ## Code Review Process
 
 All submissions will be reviewed for:
+
 - Code quality and consistency
 - Functionality and correctness
 - Performance impact

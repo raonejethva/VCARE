@@ -6,59 +6,63 @@ Load this component in your header or wherever the logo is needed
 
 <picture class="logo-container">
   <!-- WebP format for modern browsers (best compression) -->
-  <source srcset="
-    assets/images/logo-small.webp 400w,
-    assets/images/logo-medium.webp 800w,
-    assets/images/logo-large.webp 1200w
-  " 
-  sizes="(max-width: 600px) 400px, (max-width: 1200px) 800px, 1200px"
-  type="image/webp">
-  
+  <source
+    srcset="
+      assets/images/logo-small.webp   400w,
+      assets/images/logo-medium.webp  800w,
+      assets/images/logo-large.webp  1200w
+    "
+    sizes="(max-width: 600px) 400px, (max-width: 1200px) 800px, 1200px"
+    type="image/webp"
+  />
+
   <!-- PNG format fallback -->
-  <source srcset="
-    assets/images/logo-small.png 400w,
-    assets/images/logo-medium.png 800w,
-    assets/images/logo-large.png 1200w
-  " 
-  sizes="(max-width: 600px) 400px, (max-width: 1200px) 800px, 1200px"
-  type="image/png">
-  
+  <source
+    srcset="
+      assets/images/logo-small.png   400w,
+      assets/images/logo-medium.png  800w,
+      assets/images/logo-large.png  1200w
+    "
+    sizes="(max-width: 600px) 400px, (max-width: 1200px) 800px, 1200px"
+    type="image/png"
+  />
+
   <!-- Default fallback for very old browsers -->
-  <img 
-    src="assets/images/logo-medium.png" 
+  <img
+    src="assets/images/logo-medium.png"
     alt="Vatan Care - Premium NRI Property & Parental Management"
     class="logo-image"
     loading="lazy"
     width="200"
     height="auto"
     decoding="async"
-  >
+  />
 </picture>
 
 <style>
-.logo-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.logo-image {
-  width: 100%;
-  height: auto;
-  max-width: 1200px;
-  object-fit: contain;
-}
-
-/* Responsive sizing */
-@media (max-width: 600px) {
-  .logo-image {
-    max-width: 400px;
+  .logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
-}
 
-@media (max-width: 1200px) {
   .logo-image {
-    max-width: 800px;
+    width: 100%;
+    height: auto;
+    max-width: 1200px;
+    object-fit: contain;
   }
-}
+
+  /* Responsive sizing */
+  @media (max-width: 600px) {
+    .logo-image {
+      max-width: 400px;
+    }
+  }
+
+  @media (max-width: 1200px) {
+    .logo-image {
+      max-width: 800px;
+    }
+  }
 </style>

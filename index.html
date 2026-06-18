@@ -1,361 +1,516 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="gu">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vatan Care | Premium NRI Property & Parental Management Visnagar</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Vatan Care | Premium NRI Property & Parental Management Visnagar
+    </title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
     <style>
-        /* ARCHITECTURAL ROUTING ENGINE CSS */
-        .page-view {
-            display: none;
-            opacity: 0;
-            transform: translateY(16px);
-            transition: opacity 0.5s cubic-bezier(0.16, 1, 0.3, 1), transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
-        }
-        .page-view.active {
-            display: block;
-            opacity: 1;
-            transform: translateY(0);
-        }
-        
-        .lang-en .text-gu, .lang-gu .text-en {
-            display: none !important;
-        }
+      /* ARCHITECTURAL ROUTING ENGINE CSS */
+      .page-view {
+        display: none;
+        opacity: 0;
+        transform: translateY(16px);
+        transition:
+          opacity 0.5s cubic-bezier(0.16, 1, 0.3, 1),
+          transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+      }
+      .page-view.active {
+        display: block;
+        opacity: 1;
+        transform: translateY(0);
+      }
 
-        .premium-card {
-            transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
-            border: 1px solid rgba(226, 232, 240, 0.8);
-        }
-        .premium-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 30px 60px -15px rgb(0 0 0 / 0.08), 0 15px 25px -10px rgb(0 0 0 / 0.05);
-            border-color: #f59e0b;
-        }
-        .premium-btn {
-            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-            position: relative;
-            overflow: hidden;
-        }
-        .premium-btn:hover:not(:disabled) {
-            box-shadow: 0 0 30px rgba(245, 158, 11, 0.5);
-            transform: scale(1.01);
-        }
-        .premium-btn::after {
-            content: '';
-            position: absolute;
-            top: -50%;
-            left: -60%;
-            width: 30%;
-            height: 200%;
-            background: rgba(255, 255, 255, 0.3);
-            transform: rotate(30deg);
-            transition: none;
-        }
-        .premium-btn:hover:not(:disabled)::after {
-            left: 130%;
-            transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
-        }
+      .lang-en .text-gu,
+      .lang-gu .text-en {
+        display: none !important;
+      }
 
-        .slide-down-panel {
-            animation: slideDownFade 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
-        }
-        @keyframes slideDownFade {
-            from { opacity: 0; transform: translateY(-24px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
+      .premium-card {
+        transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+        border: 1px solid rgba(226, 232, 240, 0.8);
+      }
+      .premium-card:hover {
+        transform: translateY(-10px);
+        box-shadow:
+          0 30px 60px -15px rgb(0 0 0 / 0.08),
+          0 15px 25px -10px rgb(0 0 0 / 0.05);
+        border-color: #f59e0b;
+      }
+      .premium-btn {
+        transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        position: relative;
+        overflow: hidden;
+      }
+      .premium-btn:hover:not(:disabled) {
+        box-shadow: 0 0 30px rgba(245, 158, 11, 0.5);
+        transform: scale(1.01);
+      }
+      .premium-btn::after {
+        content: "";
+        position: absolute;
+        top: -50%;
+        left: -60%;
+        width: 30%;
+        height: 200%;
+        background: rgba(255, 255, 255, 0.3);
+        transform: rotate(30deg);
+        transition: none;
+      }
+      .premium-btn:hover:not(:disabled)::after {
+        left: 130%;
+        transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+      }
 
-        @keyframes spinner-rotation {
-            from { transform: rotate(0deg); }
-            to { transform: rotate(360deg); }
+      .slide-down-panel {
+        animation: slideDownFade 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+      }
+      @keyframes slideDownFade {
+        from {
+          opacity: 0;
+          transform: translateY(-24px);
         }
-        .loading-spin-icon {
-            animation: spinner-rotation 0.8s linear infinite;
+        to {
+          opacity: 1;
+          transform: translateY(0);
         }
+      }
 
-        @keyframes border-rainbow-glow {
-            0% { border-color: #f59e0b; box-shadow: 0 10px 30px -10px rgba(245, 158, 11, 0.2); }
-            50% { border-color: #2563eb; box-shadow: 0 10px 35px -5px rgba(37, 99, 235, 0.4); }
-            100% { border-color: #f59e0b; box-shadow: 0 10px 30px -10px rgba(245, 158, 11, 0.2); }
+      @keyframes spinner-rotation {
+        from {
+          transform: rotate(0deg);
         }
-        .best-value-card {
-            animation: border-rainbow-glow 4s ease-in-out infinite;
+        to {
+          transform: rotate(360deg);
         }
+      }
+      .loading-spin-icon {
+        animation: spinner-rotation 0.8s linear infinite;
+      }
+
+      @keyframes border-rainbow-glow {
+        0% {
+          border-color: #f59e0b;
+          box-shadow: 0 10px 30px -10px rgba(245, 158, 11, 0.2);
+        }
+        50% {
+          border-color: #2563eb;
+          box-shadow: 0 10px 35px -5px rgba(37, 99, 235, 0.4);
+        }
+        100% {
+          border-color: #f59e0b;
+          box-shadow: 0 10px 30px -10px rgba(245, 158, 11, 0.2);
+        }
+      }
+      .best-value-card {
+        animation: border-rainbow-glow 4s ease-in-out infinite;
+      }
     </style>
-</head>
-<body class="bg-slate-50/50 text-slate-900 font-sans antialiased flex flex-col min-h-screen lang-en" id="root-viewport">
-
+  </head>
+  <body
+    class="bg-slate-50/50 text-slate-900 font-sans antialiased flex flex-col min-h-screen lang-en"
+    id="root-viewport"
+  >
     <!-- GLOBAL TOP BANNER NODE -->
-    <div class="bg-slate-950 text-white text-xs py-3 px-4 border-b border-slate-800 shrink-0 tracking-wide">
-        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-2.5">
-            <div class="flex items-center gap-3 font-semibold text-slate-300">
-                <span class="inline-flex items-center gap-2">
-                    <i class="fa-solid fa-location-dot text-amber-500 animate-pulse"></i>
-                    <span class="text-en">Visnagar Command Center: Kansa Chokdi Hub, Mehsana Region</span>
-                    <span class="text-gu">મુખ્ય વહીવટી મથક: કાંસા ચોકડી હબ, વિસનગર (મહેસાણા)</span>
-                </span>
-            </div>
-            <div class="flex flex-wrap justify-center items-center gap-4 md:gap-6 font-bold">
-                <a href="tel:+61450920249" class="hover:text-amber-400 transition-colors flex items-center gap-1.5 text-amber-400">
-                    <i class="fa-solid fa-phone"></i> AUS Desk: +61 450 920 249
-                </a>
-                <span class="text-slate-800 hidden md:inline">|</span>
-                <a href="https://wa.me/918511620300?text=Hello%20Vatan%20Care,%20I%20want%20to%20inquire%20about%20NRI%20Services." target="_blank" class="hover:text-emerald-400 transition-colors flex items-center gap-1.5 text-emerald-400">
-                    <i class="fa-brands fa-whatsapp text-sm"></i> IND Care: +91 85116 20300
-                </a>
-                <span class="text-slate-800 hidden md:inline">|</span>
-                <span class="text-emerald-400 flex items-center gap-1.5">
-                    <i class="fa-solid fa-shield-halved text-xs"></i>
-                    <span class="text-en">NRI Verified WhatsApp Connection Active</span>
-                    <span class="text-gu">વોટ્સએપ ઓન-ગ્રાઉન્ડ લાઈન ચાલુ છે</span>
-                </span>
-            </div>
+    <div
+      class="bg-slate-950 text-white text-xs py-3 px-4 border-b border-slate-800 shrink-0 tracking-wide"
+    >
+      <div class="max-w-7xl mx-auto flex justify-center items-center">
+        <div
+          class="flex flex-wrap justify-center items-center gap-4 md:gap-6 font-bold"
+        >
+          <a
+            href="tel:+61450920249"
+            class="hover:text-amber-400 transition-colors flex items-center gap-1.5 text-amber-400"
+          >
+            <i class="fa-solid fa-phone"></i> AUS Desk: +61 450 920 249
+          </a>
+          <span class="text-slate-800 hidden md:inline">|</span>
+          <a
+            href="https://wa.me/918511620300?text=Hello%20Vatan%20Care,%20I%20want%20to%20inquire%20about%20NRI%20Services."
+            target="_blank"
+            class="hover:text-emerald-400 transition-colors flex items-center gap-1.5 text-emerald-400"
+          >
+            <i class="fa-brands fa-whatsapp text-sm"></i> IND Care: +91 85116
+            20300
+          </a>
+          <span class="text-slate-800 hidden md:inline">|</span>
+          <span class="text-emerald-400 flex items-center gap-1.5">
+            <i class="fa-solid fa-shield-halved text-xs"></i>
+            <span class="text-en">NRI Verified WhatsApp Connection Active</span>
+            <span class="text-gu">વોટ્સએપ ઓન-ગ્રાઉન્ડ લાઈન ચાલુ છે</span>
+          </span>
         </div>
+      </div>
     </div>
 
     <!-- INJECTED SYSTEM HEADER CONTAINER -->
-    <header id="header-slot" class="bg-white/80 backdrop-blur-md border-b border-gray-100 sticky top-0 z-50 shadow-sm shrink-0 transition-all"></header>
+    <header
+      id="header-slot"
+      class="bg-white/80 backdrop-blur-md border-b border-gray-100 sticky top-0 z-50 shadow-sm shrink-0 transition-all"
+    ></header>
 
     <main class="grow">
-        <!-- COMPONENT ROUTING MOUNT TIERS -->
-        <div id="home-slot" class="page-view active"></div>
-        <div id="services-slot" class="page-view"></div>
-        <div id="pricing-slot" class="page-view"></div>
+      <!-- COMPONENT ROUTING MOUNT TIERS -->
+      <div id="home-slot" class="page-view active"></div>
+      <div id="services-slot" class="page-view"></div>
+      <div id="pricing-slot" class="page-view"></div>
 
-        <!-- SUCCESS VIEW SCREEN -->
-        <div id="page-success" class="page-view">
-            <section class="max-w-xl mx-auto my-20 p-10 bg-white border border-gray-100 rounded-3xl shadow-2xl text-center space-y-5">
-                <div class="w-16 h-16 bg-emerald-100 text-emerald-600 flex items-center justify-center rounded-full text-2xl mx-auto"><i class="fa-solid fa-circle-check"></i></div>
-                <h2 class="text-xl font-black text-slate-950">Activated Successfully</h2>
-                <div id="success-dynamic-text-node" class="text-xs sm:text-sm text-gray-600 leading-relaxed"></div>
-                <button onclick="navigateTo('home')" class="w-full bg-slate-950 text-white text-xs font-black py-4 rounded-xl uppercase tracking-wider animate-btn">Back to Home Dashboard</button>
-            </section>
-        </div>
+      <!-- SUCCESS VIEW SCREEN -->
+      <div id="page-success" class="page-view">
+        <section
+          class="max-w-xl mx-auto my-16 p-8 sm:p-12 bg-white border border-gray-100 rounded-3xl shadow-2xl text-center space-y-6"
+        >
+          <div
+            class="w-20 h-20 bg-emerald-100 text-emerald-600 flex items-center justify-center rounded-full text-3xl mx-auto animate-pulse"
+          >
+            <i class="fa-solid fa-circle-check"></i>
+          </div>
+          <div class="space-y-2">
+            <h2 class="text-2xl font-black text-slate-950 tracking-tight">
+              Registration Confirmed!
+            </h2>
+            <p
+              class="text-xs sm:text-sm text-gray-500 max-w-sm mx-auto leading-relaxed"
+            >
+              Thank you for choosing Vatan Care. We are honored to care for your
+              home and family in Visnagar.
+            </p>
+          </div>
+          <div id="success-dynamic-text-node"></div>
+          <p
+            class="text-xs text-slate-400 font-medium leading-relaxed max-w-sm mx-auto"
+          >
+            Our team will reach out directly on WhatsApp within the next 2 hours
+            to coordinate the initial ground setup.
+          </p>
+          <button
+            onclick="navigateTo('home')"
+            class="w-full bg-slate-950 hover:bg-slate-900 text-white text-xs font-black py-4.5 rounded-xl uppercase tracking-widest shadow-md transition-colors animate-btn"
+          >
+            Back to Home Dashboard
+          </button>
+        </section>
+      </div>
     </main>
 
     <!-- INJECTED SYSTEM FOOTER CONTAINER -->
-    <footer id="footer-slot" class="bg-slate-950 text-slate-500 text-[10px] py-8 px-6 text-center border-t border-slate-900 shrink-0 tracking-wider"></footer>
+    <footer
+      id="footer-slot"
+      class="bg-slate-950 border-t border-slate-900 shrink-0"
+    ></footer>
 
     <script>
-        let currentSelectedPlan = "";
+      let currentSelectedPlan = "";
 
-        // Modular dynamic loader engine returning a promise for sequence tracking
-        async function loadComponentSlot(slotId, filePath) {
-            try {
-                const response = await fetch(filePath);
-                if (!response.ok) throw new Error(`HTTP Error Status: ${response.status}`);
-                const htmlContent = await response.text();
-                const slotElement = document.getElementById(slotId);
-                if (slotElement) {
-                    slotElement.innerHTML = htmlContent;
-                }
-            } catch (err) {
-                console.error(`Pipeline footprint failed loading fragment inside slot ${slotId}:`, err);
-            }
+      // Modular dynamic loader engine returning a promise for sequence tracking
+      async function loadComponentSlot(slotId, filePath) {
+        try {
+          const response = await fetch(filePath);
+          if (!response.ok)
+            throw new Error(`HTTP Error Status: ${response.status}`);
+          const htmlContent = await response.text();
+          const slotElement = document.getElementById(slotId);
+          if (slotElement) {
+            slotElement.innerHTML = htmlContent;
+          }
+        } catch (err) {
+          console.error(
+            `Pipeline footprint failed loading fragment inside slot ${slotId}:`,
+            err,
+          );
         }
+      }
 
-        // Stitch page sections sequentially, validating DOM states before booting routing configurations
-        window.addEventListener('DOMContentLoaded', async () => {
-            // Force JavaScript to wait until all component structures are safely fetched and rendered
-            await Promise.all([
-                loadComponentSlot('header-slot', './components/header.html'),
-                loadComponentSlot('home-slot', './components/home.html'),
-                loadComponentSlot('services-slot', './components/services.html'),
-                loadComponentSlot('pricing-slot', './components/pricing.html'),
-                loadComponentSlot('footer-slot', './components/footer.html')
-            ]);
+      // Stitch page sections sequentially, validating DOM states before booting routing configurations
+      window.addEventListener("DOMContentLoaded", async () => {
+        // Force JavaScript to wait until all component structures are safely fetched and rendered
+        await Promise.all([
+          loadComponentSlot("header-slot", "./components/header.html"),
+          loadComponentSlot("home-slot", "./components/home.html"),
+          loadComponentSlot("services-slot", "./components/services.html"),
+          loadComponentSlot("pricing-slot", "./components/pricing.html"),
+          loadComponentSlot("footer-slot", "./components/footer.html"),
+        ]);
 
-            // Read URL hash state only after DOM nodes safely exist
-            const initialHash = window.location.hash.replace('#', '');
-            const validPages = ['home', 'services', 'pricing', 'success'];
-            
-            if (initialHash && validPages.includes(initialHash)) {
-                navigateTo(initialHash);
-            } else {
-                navigateTo('home');
-            }
+        // Read URL hash state only after DOM nodes safely exist
+        const initialHash = window.location.hash.replace("#", "");
+        const validPages = ["home", "services", "pricing", "success"];
+
+        if (initialHash && validPages.includes(initialHash)) {
+          navigateTo(initialHash);
+        } else {
+          navigateTo("home");
+        }
+      });
+
+      // Sync hash updates seamlessly
+      window.addEventListener("hashchange", () => {
+        const currentHash = window.location.hash.replace("#", "") || "home";
+        navigateTo(currentHash);
+      });
+
+      function setLanguage(langCode) {
+        const viewport = document.getElementById("root-viewport");
+        const btnEn = document.getElementById("btn-lang-en");
+        const btnGu = document.getElementById("btn-lang-gu");
+
+        if (!viewport) return;
+
+        if (langCode === "gu") {
+          viewport.classList.remove("lang-en");
+          viewport.classList.add("lang-gu");
+          if (btnGu)
+            btnGu.className =
+              "px-4 py-2 rounded-lg transition-all bg-slate-900 text-white shadow-sm";
+          if (btnEn)
+            btnEn.className =
+              "px-4 py-2 rounded-lg transition-all text-slate-600";
+        } else {
+          viewport.classList.remove("lang-gu");
+          viewport.classList.add("lang-en");
+          if (btnEn)
+            btnEn.className =
+              "px-4 py-2 rounded-lg transition-all bg-slate-900 text-white shadow-sm";
+          if (btnGu)
+            btnGu.className =
+              "px-4 py-2 rounded-lg transition-all text-slate-600";
+        }
+      }
+
+      function navigateTo(pageId) {
+        const navButtons = document.querySelectorAll("header nav button");
+        navButtons.forEach(
+          (btn) => (btn.className = "hover:text-amber-600 transition-colors"),
+        );
+
+        const targets = ["home", "services", "pricing", "success"];
+        targets.forEach((t) => {
+          const node =
+            document.getElementById(t + "-slot") ||
+            document.getElementById("page-" + t);
+          if (node) {
+            node.classList.remove("active");
+            node.style.display = "none";
+          }
         });
 
-        // Sync hash updates seamlessly
-        window.addEventListener('hashchange', () => {
-            const currentHash = window.location.hash.replace('#', '') || 'home';
-            navigateTo(currentHash);
+        const activeMount =
+          document.getElementById(pageId + "-slot") ||
+          document.getElementById("page-" + pageId);
+        if (activeMount) {
+          activeMount.style.display = "block";
+          setTimeout(() => {
+            activeMount.classList.add("active");
+          }, 10);
+        }
+
+        const currentActiveNode = document.getElementById("nav-" + pageId);
+        if (currentActiveNode) {
+          currentActiveNode.className =
+            "text-amber-600 transition-colors font-extrabold";
+        }
+
+        if (window.location.hash !== "#" + pageId) {
+          window.location.hash = pageId;
+        }
+
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      }
+
+      function activatePlanFlow(planName, typeKey) {
+        currentSelectedPlan = planName;
+        const planTitleNode = document.getElementById("target-plan-title");
+        if (planTitleNode) {
+          planTitleNode.innerHTML = `<i class="fa-solid fa-box-open text-amber-500 mr-2"></i> ${planName}`;
+        }
+
+        const arrays = [
+          "prop-silver",
+          "prop-gold",
+          "prop-platinum",
+          "parent-silver",
+          "parent-gold",
+          "parent-platinum",
+        ];
+        arrays.forEach((k) => {
+          const element = document.getElementById("services-" + k);
+          if (element) element.classList.add("hidden");
         });
 
-        function setLanguage(langCode) {
-            const viewport = document.getElementById('root-viewport');
-            const btnEn = document.getElementById('btn-lang-en');
-            const btnGu = document.getElementById('btn-lang-gu');
-            
-            if (!viewport) return;
+        const activeDeliverable = document.getElementById(
+          "services-" + typeKey,
+        );
+        if (activeDeliverable) activeDeliverable.classList.remove("hidden");
 
-            if (langCode === 'gu') {
-                viewport.classList.remove('lang-en');
-                viewport.classList.add('lang-gu');
-                if(btnGu) btnGu.className = "px-4 py-2 rounded-lg transition-all bg-slate-900 text-white shadow-sm";
-                if(btnEn) btnEn.className = "px-4 py-2 rounded-lg transition-all text-slate-600";
+        const servicesPanel = document.getElementById("dynamic-services-panel");
+        if (servicesPanel) servicesPanel.classList.remove("hidden");
+
+        arrays.forEach((k) => {
+          const targetCard = document.getElementById("card-" + k);
+          if (targetCard) {
+            if (k === "parent-platinum") {
+              targetCard.className =
+                "premium-card bg-white p-8 rounded-3xl flex flex-col justify-between h-full cursor-pointer border-2 best-value-card relative shadow-md";
+            } else if (k.includes("prop")) {
+              targetCard.className =
+                "premium-card bg-white border border-gray-200 p-8 rounded-3xl flex flex-col justify-between h-full cursor-pointer border-t-4 " +
+                (k.includes("silver")
+                  ? "border-t-slate-400"
+                  : k.includes("gold")
+                    ? "border-t-amber-500"
+                    : "border-t-slate-900");
             } else {
-                viewport.classList.remove('lang-gu');
-                viewport.classList.add('lang-en');
-                if(btnEn) btnEn.className = "px-4 py-2 rounded-lg transition-all bg-slate-900 text-white shadow-sm";
-                if(btnGu) btnGu.className = "px-4 py-2 rounded-lg transition-all text-slate-600";
+              targetCard.className =
+                "premium-card bg-white border border-gray-200 p-8 rounded-3xl flex flex-col justify-between h-full cursor-pointer border-t-4 " +
+                (k.includes("silver")
+                  ? "border-t-slate-400"
+                  : "border-t-blue-500");
             }
+          }
+        });
+
+        const activeCard = document.getElementById("card-" + typeKey);
+        if (activeCard) {
+          if (typeKey === "parent-platinum") {
+            activeCard.className =
+              "premium-card bg-white p-8 rounded-3xl flex flex-col justify-between cursor-pointer border-4 border-blue-600 best-value-card relative transform scale-105 shadow-2xl bg-gradient-to-b from-white to-blue-50/20";
+          } else {
+            activeCard.className =
+              "premium-card bg-white border-2 border-amber-500 p-8 rounded-3xl flex flex-col justify-between shadow-xl relative transform scale-105 cursor-pointer";
+          }
         }
 
-        function navigateTo(pageId) {
-            const navButtons = document.querySelectorAll('header nav button');
-            navButtons.forEach(btn => btn.className = "hover:text-amber-600 transition-colors");
+        if (servicesPanel) {
+          servicesPanel.scrollIntoView({ behavior: "smooth", block: "start" });
+        }
+      }
 
-            const targets = ['home', 'services', 'pricing', 'success'];
-            targets.forEach(t => {
-                const node = document.getElementById(t + '-slot') || document.getElementById('page-' + t);
-                if(node) {
-                    node.classList.remove('active');
-                    node.style.display = "none";
-                }
-            });
-            
-            const activeMount = document.getElementById(pageId + '-slot') || document.getElementById('page-' + pageId);
-            if(activeMount) {
-                activeMount.style.display = "block";
-                setTimeout(() => { activeMount.classList.add('active'); }, 10);
-            }
-            
-            const currentActiveNode = document.getElementById('nav-' + pageId);
-            if(currentActiveNode) {
-                currentActiveNode.className = "text-amber-600 transition-colors font-extrabold";
-            }
+      function handleAdvancedDetailsSubmit(event) {
+        event.preventDefault();
 
-            if(window.location.hash !== '#' + pageId) {
-                window.location.hash = pageId;
-            }
-            
-            window.scrollTo({ top: 0, behavior: 'smooth' });
+        const nameField = document.getElementById("form-name");
+        const emailField = document.getElementById("form-email");
+        const phoneField = document.getElementById("form-intl-phone");
+        const errorNode = document.getElementById("phone-error-node");
+        const submitBtn = document.getElementById("form-submit-btn");
+        const defaultText = document.getElementById("btn-default-text");
+        const loadingText = document.getElementById("btn-loading-text");
+
+        if (phoneField)
+          phoneField.classList.remove(
+            "border-red-500",
+            "ring-2",
+            "ring-red-200",
+          );
+        if (errorNode) errorNode.classList.add("hidden");
+
+        const cleanedPhoneDigits = phoneField
+          ? phoneField.value.replace(/[^0-9]/g, "")
+          : "";
+
+        if (cleanedPhoneDigits.length < 7 || cleanedPhoneDigits.length > 15) {
+          if (phoneField) {
+            phoneField.classList.add(
+              "border-red-500",
+              "ring-2",
+              "ring-red-200",
+            );
+            phoneField.focus();
+          }
+          if (errorNode) {
+            errorNode.innerText =
+              " Invalid Phone! Please write a valid digit framework.";
+            errorNode.classList.remove("hidden");
+          }
+          return;
         }
 
-        function activatePlanFlow(planName, typeKey) {
-            currentSelectedPlan = planName;
-            const planTitleNode = document.getElementById('target-plan-title');
-            if (planTitleNode) {
-                planTitleNode.innerHTML = `<i class="fa-solid fa-box-open text-amber-500 mr-2"></i> ${planName}`;
+        const formData = {
+          nriName: nameField ? nameField.value : "",
+          nriEmail: emailField ? emailField.value : "",
+          profession: document.getElementById("form-profession")
+            ? document.getElementById("form-profession").value
+            : "",
+          abroadPhone: phoneField ? phoneField.value : "",
+          planSelected: currentSelectedPlan,
+          vatanAddress: document.getElementById("form-address")
+            ? document.getElementById("form-address").value
+            : "",
+          elderScopeIssues: document.getElementById("form-work")
+            ? document.getElementById("form-work").value
+            : "",
+        };
+
+        if (submitBtn) submitBtn.disabled = true;
+        if (defaultText) defaultText.classList.add("hidden");
+        if (loadingText) loadingText.classList.remove("hidden");
+
+        const tunnelUrl =
+          "https://vatancare-backend-api-tik0.onrender.com/api/bookings/activate";
+
+        fetch(tunnelUrl, {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            "Bypass-Tunnel-Reminder": "true",
+          },
+          body: JSON.stringify(formData),
+        })
+          .then((response) => {
+            if (!response.ok) throw new Error("Network core drop");
+            return response.json();
+          })
+          .then((data) => {
+            if (data.success) {
+              const node = document.getElementById("success-dynamic-text-node");
+              if (node) {
+                node.innerHTML = `
+                  <div class="text-left bg-slate-50/50 p-6 rounded-2xl text-xs space-y-3 my-4 border border-gray-200/60 max-w-md mx-auto">
+                    <div class="border-b border-gray-200/50 pb-2 flex justify-between items-center">
+                      <span class="font-bold text-gray-400 uppercase tracking-widest text-[9px]">Summary Details</span>
+                      <span class="px-2.5 py-0.5 bg-emerald-100 text-emerald-700 font-extrabold rounded-md text-[9px] uppercase tracking-wider">Active</span>
+                    </div>
+                    <div class="grid grid-cols-3 gap-2 pt-1">
+                      <span class="text-gray-400 font-semibold">Client Name:</span>
+                      <span class="col-span-2 text-slate-900 font-extrabold text-right">${formData.nriName}</span>
+                    </div>
+                    <div class="grid grid-cols-3 gap-2">
+                      <span class="text-gray-400 font-semibold">Email ID:</span>
+                      <span class="col-span-2 text-slate-900 font-extrabold text-right">${formData.nriEmail}</span>
+                    </div>
+                    <div class="grid grid-cols-3 gap-2">
+                      <span class="text-gray-400 font-semibold">Selected Plan:</span>
+                      <span class="col-span-2 text-slate-900 font-extrabold text-right">${formData.planSelected}</span>
+                    </div>
+                    <div class="grid grid-cols-3 gap-2">
+                      <span class="text-gray-400 font-semibold">Property Address:</span>
+                      <span class="col-span-2 text-slate-900 font-medium text-right leading-tight">${formData.vatanAddress}</span>
+                    </div>
+                  </div>
+                `;
+              }
+              navigateTo("success");
             }
-            
-            const arrays = ['prop-silver', 'prop-gold', 'prop-platinum', 'parent-silver', 'parent-gold', 'parent-platinum'];
-            arrays.forEach(k => {
-                const element = document.getElementById('services-' + k);
-                if(element) element.classList.add('hidden');
-            });
-            
-            const activeDeliverable = document.getElementById('services-' + typeKey);
-            if(activeDeliverable) activeDeliverable.classList.remove('hidden');
-            
-            const servicesPanel = document.getElementById('dynamic-services-panel');
-            if (servicesPanel) servicesPanel.classList.remove('hidden');
-            
-            arrays.forEach(k => {
-                const targetCard = document.getElementById('card-' + k);
-                if(targetCard) {
-                    if(k === 'parent-platinum') {
-                        targetCard.className = "premium-card bg-white p-8 rounded-3xl flex flex-col justify-between h-full cursor-pointer border-2 best-value-card relative shadow-md";
-                    } else if(k.includes('prop')) {
-                        targetCard.className = "premium-card bg-white border border-gray-200 p-8 rounded-3xl flex flex-col justify-between h-full cursor-pointer border-t-4 " + (k.includes('silver') ? 'border-t-slate-400' : k.includes('gold') ? 'border-t-amber-500' : 'border-t-slate-900');
-                    } else {
-                        targetCard.className = "premium-card bg-white border border-gray-200 p-8 rounded-3xl flex flex-col justify-between h-full cursor-pointer border-t-4 " + (k.includes('silver') ? 'border-t-slate-400' : 'border-t-blue-500');
-                    }
-                }
-            });
-            
-            const activeCard = document.getElementById('card-' + typeKey);
-            if (activeCard) {
-                if(typeKey === 'parent-platinum') {
-                    activeCard.className = "premium-card bg-white p-8 rounded-3xl flex flex-col justify-between cursor-pointer border-4 border-blue-600 best-value-card relative transform scale-105 shadow-2xl bg-gradient-to-b from-white to-blue-50/20";
-                } else {
-                    activeCard.className = "premium-card bg-white border-2 border-amber-500 p-8 rounded-3xl flex flex-col justify-between shadow-xl relative transform scale-105 cursor-pointer";
-                }
-            }
-            
-            if (servicesPanel) {
-                servicesPanel.scrollIntoView({ behavior: 'smooth', block: 'start' });
-            }
-        }
-
-        function handleAdvancedDetailsSubmit(event) {
-            event.preventDefault();
-            
-            const nameField = document.getElementById('form-name');
-            const phoneField = document.getElementById('form-intl-phone');
-            const errorNode = document.getElementById('phone-error-node');
-            const submitBtn = document.getElementById('form-submit-btn');
-            const defaultText = document.getElementById('btn-default-text');
-            const loadingText = document.getElementById('btn-loading-text');
-
-            if (phoneField) phoneField.classList.remove('border-red-500', 'ring-2', 'ring-red-200');
-            if (errorNode) errorNode.classList.add('hidden');
-
-            const cleanedPhoneDigits = phoneField ? phoneField.value.replace(/[^0-9]/g, '') : '';
-            
-            if (cleanedPhoneDigits.length < 7 || cleanedPhoneDigits.length > 15) {
-                if (phoneField) {
-                    phoneField.classList.add('border-red-500', 'ring-2', 'ring-red-200');
-                    phoneField.focus();
-                }
-                if (errorNode) {
-                    errorNode.innerText = " Invalid Phone! Please write a valid digit framework.";
-                    errorNode.classList.remove('hidden');
-                }
-                return;
-            }
-
-            const formData = {
-                nriName: nameField ? nameField.value : '',
-                profession: document.getElementById('form-profession') ? document.getElementById('form-profession').value : '',
-                abroadPhone: phoneField ? phoneField.value : '',
-                planSelected: currentSelectedPlan,
-                vatanAddress: document.getElementById('form-address') ? document.getElementById('form-address').value : '',
-                elderScopeIssues: document.getElementById('form-work') ? document.getElementById('form-work').value : ''
-            };
-
-            if (submitBtn) submitBtn.disabled = true;
-            if (defaultText) defaultText.classList.add('hidden');
-            if (loadingText) loadingText.classList.remove('hidden');
-
-            const tunnelUrl = 'https://vatancare-backend-api-tik0.onrender.com/api/bookings/activate';              
-            
-            fetch(tunnelUrl, {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json', 'Bypass-Tunnel-Reminder': 'true' },
-                body: JSON.stringify(formData)
-            })
-            .then(response => {
-                if (!response.ok) throw new Error('Network core drop');
-                return response.json();
-            })
-            .then(data => {
-                if(data.success) {
-                    const node = document.getElementById('success-dynamic-text-node');
-                    if (node) {
-                        node.innerHTML = `
-                            <div class="text-left bg-slate-50 p-6 rounded-2xl text-xs space-y-2 my-3 border border-gray-100">
-                                <p><strong>NRI Name:</strong> ${formData.nriName}</p>
-                                <p><strong>Selected Framework:</strong> ${formData.planSelected}</p>
-                                <p><strong>Target Address Location:</strong> ${formData.vatanAddress}</p>
-                            </div>
-                        `;
-                    }
-                    navigateTo('success');
-                }
-            })
-            .catch(error => {
-                console.error(error);
-                alert('Connection footprint error. Verify Render endpoint pipelines.');
-            })
-            .finally(() => {
-                if (submitBtn) submitBtn.disabled = false;
-                if (loadingText) loadingText.classList.add('hidden');
-                if (defaultText) defaultText.classList.remove('hidden');
-            });
-        }
+          })
+          .catch((error) => {
+            console.error(error);
+            alert(
+              "Connection footprint error. Verify Render endpoint pipelines.",
+            );
+          })
+          .finally(() => {
+            if (submitBtn) submitBtn.disabled = false;
+            if (loadingText) loadingText.classList.add("hidden");
+            if (defaultText) defaultText.classList.remove("hidden");
+          });
+      }
     </script>
-</body>
+  </body>
 </html>
