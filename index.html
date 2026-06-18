@@ -263,6 +263,9 @@
 
         if (!viewport) return;
 
+        // Dynamically update document language attribute for crawler and reader compliance
+        document.documentElement.lang = langCode;
+
         if (langCode === "gu") {
           viewport.classList.remove("lang-en");
           viewport.classList.add("lang-gu");
