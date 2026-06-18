@@ -11,12 +11,16 @@
 </section>
 
 <section class="max-w-6xl mx-auto pt-16 px-6">
-  <div class="border-b border-gray-200 pb-4 mb-10">
-    <h3 class="text-xl font-black text-slate-900 flex items-center gap-2">
-      <i class="fa-solid fa-building-shield text-slate-700"></i> Section A:
-      Property Care Plans
+  <div class="border-b border-gray-200 dark:border-slate-800 pb-4 mb-10">
+    <h3
+      class="text-xl font-black text-slate-900 dark:text-white flex items-center gap-2"
+    >
+      <i
+        class="fa-solid fa-building-shield text-slate-700 dark:text-slate-400"
+      ></i>
+      Section A: Property Care Plans
     </h3>
-    <p class="text-xs text-gray-500 font-medium">
+    <p class="text-xs text-gray-500 dark:text-slate-400 font-medium">
       Dedicated property monitoring, reporting, and maintenance supervision.
     </p>
   </div>
@@ -28,30 +32,36 @@
       onclick="
         activatePlanFlow('Property Silver ($80 USD / Month)', 'prop-silver')
       "
-      class="premium-card bg-white border border-gray-200 p-8 rounded-3xl flex flex-col justify-between cursor-pointer border-t-4 border-t-slate-400"
+      class="premium-card bg-white dark:bg-slate-900 border border-gray-200 dark:border-slate-800 p-8 rounded-3xl flex flex-col justify-between cursor-pointer border-t-4 border-t-slate-400 text-slate-900 dark:text-slate-100 transition-all duration-300"
     >
       <div>
         <h4
-          class="font-black text-slate-400 text-[10px] uppercase tracking-widest"
+          class="font-black text-slate-400 dark:text-slate-500 text-[10px] uppercase tracking-widest"
         >
           Property Care • 1 Month
         </h4>
         <h3
-          class="font-black text-slate-950 text-xl mt-1 uppercase tracking-wider"
+          class="font-black text-slate-950 dark:text-white text-xl mt-1 uppercase tracking-wider"
         >
           Silver Plan
         </h3>
-        <div class="text-4xl font-black text-slate-900 my-4.5">
-          $80<span class="text-xs text-gray-400 font-normal"> USD/MONTH</span>
+        <div class="text-4xl font-black text-slate-900 dark:text-white my-4.5">
+          $80<span
+            class="text-xs text-gray-400 dark:text-slate-500 font-normal"
+          >
+            USD/MONTH</span
+          >
         </div>
-        <p class="text-xs text-gray-500 font-medium leading-relaxed">
+        <p
+          class="text-xs text-gray-500 dark:text-slate-400 font-medium leading-relaxed"
+        >
           Monthly vacant property checkups, high-definition photo/video updates,
           structural moisture/leak checks, and local contractor oversight.
         </p>
       </div>
       <div>
         <div
-          class="bg-slate-100/80 rounded-xl px-4 py-2.5 mt-6 text-center text-[10px] font-bold text-slate-500 tracking-wide"
+          class="bg-slate-100/80 dark:bg-slate-800/80 rounded-xl px-4 py-2.5 mt-6 text-center text-[10px] font-bold text-slate-500 dark:text-slate-400 tracking-wide"
         >
           Flexible Month-to-Month Plan
         </div>
@@ -61,7 +71,6 @@
       </div>
     </div>
 
-    <!-- Property Gold Plan -->
     <div
       id="card-prop-gold"
       onclick="
@@ -70,12 +79,12 @@
           'prop-gold',
         )
       "
-      class="premium-card bg-white border border-gray-200 p-8 rounded-3xl flex flex-col justify-between cursor-pointer border-t-4 border-t-amber-500"
+      class="premium-card bg-white dark:bg-slate-900 border border-gray-200 dark:border-slate-800 p-8 rounded-3xl flex flex-col justify-between cursor-pointer border-t-4 border-t-amber-500 text-slate-900 dark:text-slate-100 transition-all duration-300"
     >
       <div>
         <div class="flex justify-between items-center">
           <h4
-            class="font-black text-amber-650 text-[10px] uppercase tracking-widest text-amber-600"
+            class="font-black text-amber-650 text-[10px] uppercase tracking-widest text-amber-600 dark:text-amber-500"
           >
             Property Care • 6 Months
           </h4>
@@ -86,51 +95,63 @@
           </span>
         </div>
         <h3
-          class="font-black text-slate-950 text-xl mt-1.5 uppercase tracking-wider"
+          class="font-black text-slate-950 dark:text-white text-xl mt-1.5 uppercase tracking-wider"
         >
           Gold Plan
         </h3>
         <div class="my-4.5">
           <div class="flex items-baseline gap-2">
-            <span class="text-4xl font-black text-slate-900">$432</span>
-            <span class="text-sm font-bold text-gray-400 line-through"
+            <span class="text-4xl font-black text-slate-900 dark:text-white"
+              >$432</span
+            >
+            <span
+              class="text-sm font-bold text-gray-400 dark:text-slate-500 line-through"
               >$480</span
             >
             <span
-              class="text-[10px] text-emerald-700 font-black bg-emerald-100/80 px-2 py-0.5 rounded-md"
+              class="text-[10px] text-emerald-700 font-black bg-emerald-100/80 dark:bg-emerald-950/40 dark:text-emerald-450 px-2 py-0.5 rounded-md"
             >
               SAVE $48
             </span>
           </div>
-          <div class="text-[11px] text-gray-500 font-bold mt-1 uppercase">
+          <div
+            class="text-[11px] text-gray-500 dark:text-slate-400 font-bold mt-1 uppercase"
+          >
             USD/6 MONTHS
-            <span class="text-slate-400 font-medium lowercase"
+            <span
+              class="text-slate-400 dark:text-slate-500 font-medium lowercase"
               >($72/month equivalent)</span
             >
           </div>
         </div>
-        <p class="text-xs text-gray-500 font-medium leading-relaxed">
+        <p
+          class="text-xs text-gray-500 dark:text-slate-400 font-medium leading-relaxed"
+        >
           Comprehensive structural checkups, utility bill payments, municipal
           tax verification, and hand-delivered document tracking.
         </p>
       </div>
       <div>
         <div
-          class="bg-gradient-to-r from-amber-500/10 to-amber-600/5 border border-amber-400/20 rounded-2xl p-3.5 mt-6 text-left shadow-sm flex items-center justify-between gap-3 group hover:border-amber-500 transition-colors"
+          class="bg-gradient-to-r from-amber-500/10 to-amber-600/5 dark:from-amber-500/20 dark:to-amber-950/10 border border-amber-400/20 dark:border-amber-550/30 rounded-2xl p-3.5 mt-6 text-left shadow-sm flex items-center justify-between gap-3 group hover:border-amber-500 transition-colors"
         >
           <div class="space-y-0.5">
             <span
-              class="text-[11px] font-black text-amber-700 uppercase tracking-wider flex items-center gap-1.5"
+              class="text-[11px] font-black text-amber-700 dark:text-amber-400 uppercase tracking-wider flex items-center gap-1.5"
             >
               <span
                 class="w-1.5 h-1.5 rounded-full bg-amber-500 animate-ping"
               ></span
               >10% SEMI-ANNUAL SAVINGS
             </span>
-            <p class="text-[10px] text-slate-500 font-bold leading-normal">
+            <p
+              class="text-[10px] text-slate-500 dark:text-slate-400 font-bold leading-normal"
+            >
               Price reduced from $480 to
-              <strong class="text-amber-600 font-black">$432</strong> at
-              checkout.
+              <strong class="text-amber-600 dark:text-amber-400 font-black"
+                >$432</strong
+              >
+              at checkout.
             </p>
           </div>
           <div
@@ -154,12 +175,12 @@
           'prop-platinum',
         )
       "
-      class="premium-card bg-white p-8 rounded-3xl flex flex-col justify-between cursor-pointer border-t-4 border-t-slate-900 shadow-md"
+      class="premium-card bg-white dark:bg-slate-900 border border-gray-200 dark:border-slate-800 p-8 rounded-3xl flex flex-col justify-between cursor-pointer border-t-4 border-t-slate-900 dark:border-t-white shadow-md text-slate-900 dark:text-slate-100 transition-all duration-300"
     >
       <div>
         <div class="flex justify-between items-center">
           <h4
-            class="font-black text-slate-900 text-[10px] uppercase tracking-widest"
+            class="font-black text-slate-900 dark:text-slate-350 text-[10px] uppercase tracking-widest"
           >
             Property Care • 12 Months
           </h4>
@@ -170,40 +191,48 @@
           </span>
         </div>
         <h3
-          class="font-black text-slate-950 text-xl mt-1.5 uppercase tracking-wider"
+          class="font-black text-slate-950 dark:text-white text-xl mt-1.5 uppercase tracking-wider"
         >
           Platinum Plan
         </h3>
         <div class="my-4.5">
           <div class="flex items-baseline gap-2">
-            <span class="text-4xl font-black text-slate-900">$720</span>
-            <span class="text-sm font-bold text-gray-400 line-through"
+            <span class="text-4xl font-black text-slate-900 dark:text-white"
+              >$720</span
+            >
+            <span
+              class="text-sm font-bold text-gray-400 dark:text-slate-500 line-through"
               >$960</span
             >
             <span
-              class="text-[10px] text-emerald-700 font-black bg-emerald-100/80 px-2 py-0.5 rounded-md"
+              class="text-[10px] text-emerald-700 font-black bg-emerald-100/80 dark:bg-emerald-950/40 dark:text-emerald-450 px-2 py-0.5 rounded-md"
             >
               SAVE $240
             </span>
           </div>
-          <div class="text-[11px] text-gray-500 font-bold mt-1 uppercase">
+          <div
+            class="text-[11px] text-gray-500 dark:text-slate-400 font-bold mt-1 uppercase"
+          >
             USD/12 MONTHS
-            <span class="text-slate-400 font-medium lowercase"
+            <span
+              class="text-slate-400 dark:text-slate-500 font-medium lowercase"
               >($60/month equivalent)</span
             >
           </div>
         </div>
-        <p class="text-xs text-gray-500 font-medium leading-relaxed">
+        <p
+          class="text-xs text-gray-500 dark:text-slate-400 font-medium leading-relaxed"
+        >
           Premium legal property boundary checks to prevent encroachment, full
           documentation verification, and priority damage-control coordination.
         </p>
       </div>
       <div>
         <div
-          class="bg-slate-950 border border-slate-800 rounded-2xl p-3.5 mt-6 text-left shadow-md flex items-center justify-between gap-3 relative overflow-hidden"
+          class="bg-slate-950 dark:bg-slate-950/60 border border-slate-800 dark:border-slate-700/80 rounded-2xl p-3.5 mt-6 text-left shadow-md flex items-center justify-between gap-3 relative overflow-hidden"
         >
           <div
-            class="absolute -right-4 -bottom-4 text-slate-900 font-black text-5xl select-none pointer-events-none tracking-tighter"
+            class="absolute -right-4 -bottom-4 text-slate-900 dark:text-slate-850 font-black text-5xl select-none pointer-events-none tracking-tighter"
           >
             25%
           </div>
@@ -214,7 +243,9 @@
               <i class="fa-solid fa-bolt text-xs animate-bounce"></i>25% ANNUAL
               VIP SAVINGS
             </span>
-            <p class="text-[10px] text-slate-400 font-medium leading-normal">
+            <p
+              class="text-[10px] text-slate-400 dark:text-slate-300 font-medium leading-normal"
+            >
               Price reduced from $960 to
               <strong class="text-amber-400 font-black">$720</strong> at
               checkout.
@@ -227,7 +258,7 @@
           </div>
         </div>
         <span
-          class="text-xs font-bold text-slate-950 mt-4 block text-right font-black"
+          class="text-xs font-bold text-slate-950 dark:text-amber-400 mt-4 block text-right font-black"
         >
           Select Plan <i class="fa-solid fa-arrow-down ml-1"></i>
         </span>
@@ -237,12 +268,14 @@
 </section>
 
 <section class="max-w-6xl mx-auto pt-24 pb-24 px-6">
-  <div class="border-b border-gray-200 pb-4 mb-10">
-    <h3 class="text-xl font-black text-slate-900 flex items-center gap-2">
-      <i class="fa-solid fa-heart-pulse text-blue-600"></i> Section B: Parental
-      Care & Support Plans
+  <div class="border-b border-gray-200 dark:border-slate-800 pb-4 mb-10">
+    <h3
+      class="text-xl font-black text-slate-900 dark:text-white flex items-center gap-2"
+    >
+      <i class="fa-solid fa-heart-pulse text-blue-600 dark:text-blue-400"></i>
+      Section B: Parental Care & Support Plans
     </h3>
-    <p class="text-xs text-gray-500 font-medium">
+    <p class="text-xs text-gray-500 dark:text-slate-400 font-medium">
       Dedicated parental care coordination, bank paperwork updates, grocery
       management, and regular wellness updates.
     </p>
@@ -255,34 +288,42 @@
       onclick="
         activatePlanFlow('Parental Silver ($149 USD / Month)', 'parent-silver')
       "
-      class="premium-card bg-white border border-gray-200 p-8 rounded-3xl flex flex-col justify-between cursor-pointer border-t-4 border-t-slate-400 relative"
+      class="premium-card bg-white dark:bg-slate-900 border border-gray-200 dark:border-slate-800 p-8 rounded-3xl flex flex-col justify-between cursor-pointer border-t-4 border-t-slate-400 text-slate-900 dark:text-slate-100 transition-all duration-300 relative"
     >
       <div>
         <h4
-          class="font-black text-slate-400 text-[10px] uppercase tracking-widest"
+          class="font-black text-slate-400 dark:text-slate-500 text-[10px] uppercase tracking-widest"
         >
           Parental Care • 1 Month
         </h4>
         <h3
-          class="font-black text-slate-950 text-xl mt-1 uppercase tracking-wider"
+          class="font-black text-slate-950 dark:text-white text-xl mt-1 uppercase tracking-wider"
         >
           Silver Pro Plan
         </h3>
-        <div class="text-4xl font-black text-slate-900 my-4.5">
-          $149<span class="text-xs text-gray-400 font-normal"> USD/MONTH</span>
+        <div class="text-4xl font-black text-slate-900 dark:text-white my-4.5">
+          $149<span
+            class="text-xs text-gray-400 dark:text-slate-500 font-normal"
+          >
+            USD/MONTH</span
+          >
         </div>
-        <p class="text-xs text-gray-500 font-medium leading-relaxed">
+        <p
+          class="text-xs text-gray-500 dark:text-slate-400 font-medium leading-relaxed"
+        >
           Local bank account updates, physical passbook printing services,
           utility bill management, and pantry ration checks.
         </p>
       </div>
       <div>
         <div
-          class="bg-slate-100/80 rounded-xl px-4 py-2.5 mt-6 text-center text-[10px] font-bold text-slate-500 tracking-wide"
+          class="bg-slate-100/80 dark:bg-slate-800/80 rounded-xl px-4 py-2.5 mt-6 text-center text-[10px] font-bold text-slate-500 dark:text-slate-400 tracking-wide"
         >
           Flexible Monthly Support Plan
         </div>
-        <span class="text-xs font-bold text-blue-600 mt-4 block text-right">
+        <span
+          class="text-xs font-bold text-blue-600 dark:text-blue-450 mt-4 block text-right"
+        >
           Select Plan <i class="fa-solid fa-arrow-down ml-1"></i>
         </span>
       </div>
@@ -297,12 +338,12 @@
           'parent-gold',
         )
       "
-      class="premium-card bg-white border border-gray-200 p-8 rounded-3xl flex flex-col justify-between cursor-pointer border-t-4 border-t-blue-500"
+      class="premium-card bg-white dark:bg-slate-900 border border-gray-200 dark:border-slate-800 p-8 rounded-3xl flex flex-col justify-between cursor-pointer border-t-4 border-t-blue-500 text-slate-900 dark:text-slate-100 transition-all duration-300"
     >
       <div>
         <div class="flex justify-between items-center">
           <h4
-            class="font-black text-blue-650 text-[10px] uppercase tracking-widest text-blue-600"
+            class="font-black text-blue-650 text-[10px] uppercase tracking-widest text-blue-600 dark:text-blue-450"
           >
             Parental Care • 6 Months
           </h4>
@@ -313,41 +354,49 @@
           </span>
         </div>
         <h3
-          class="font-black text-slate-950 text-xl mt-1.5 uppercase tracking-wider"
+          class="font-black text-slate-950 dark:text-white text-xl mt-1.5 uppercase tracking-wider"
         >
           Gold Pro Plan
         </h3>
         <div class="my-4.5">
           <div class="flex items-baseline gap-2">
-            <span class="text-4xl font-black text-slate-900">$804</span>
-            <span class="text-sm font-bold text-gray-400 line-through"
+            <span class="text-4xl font-black text-slate-900 dark:text-white"
+              >$804</span
+            >
+            <span
+              class="text-sm font-bold text-gray-400 dark:text-slate-500 line-through"
               >$894</span
             >
             <span
-              class="text-[10px] text-emerald-700 font-black bg-emerald-100/80 px-2 py-0.5 rounded-md"
+              class="text-[10px] text-emerald-700 font-black bg-emerald-100/80 dark:bg-emerald-950/40 dark:text-emerald-450 px-2 py-0.5 rounded-md"
             >
               SAVE $90
             </span>
           </div>
-          <div class="text-[11px] text-gray-500 font-bold mt-1 uppercase">
+          <div
+            class="text-[11px] text-gray-500 dark:text-slate-400 font-bold mt-1 uppercase"
+          >
             USD/6 MONTHS
-            <span class="text-slate-400 font-medium lowercase"
+            <span
+              class="text-slate-400 dark:text-slate-500 font-medium lowercase"
               >($134/month equivalent)</span
             >
           </div>
         </div>
-        <p class="text-xs text-gray-500 font-medium leading-relaxed">
+        <p
+          class="text-xs text-gray-500 dark:text-slate-400 font-medium leading-relaxed"
+        >
           Home grocery deliveries, technical support for WiFi/tablet setups,
           wellness checkups, and prescription refill coordination.
         </p>
       </div>
       <div>
         <div
-          class="bg-gradient-to-r from-amber-500/10 to-amber-600/5 border border-amber-400/30 rounded-2xl p-3.5 mt-6 text-left shadow-sm flex items-center justify-between gap-3 group hover:border-amber-500 transition-all"
+          class="bg-gradient-to-r from-amber-500/10 to-amber-600/5 dark:from-amber-500/20 dark:to-amber-950/10 border border-amber-400/30 dark:border-amber-500/20 rounded-2xl p-3.5 mt-6 text-left shadow-sm flex items-center justify-between gap-3 group hover:border-amber-500 transition-all"
         >
           <div class="space-y-0.5">
             <span
-              class="text-[11px] font-black text-amber-800 uppercase tracking-wider flex items-center gap-1.5"
+              class="text-[11px] font-black text-amber-800 dark:text-amber-400 uppercase tracking-wider flex items-center gap-1.5"
             >
               <i
                 class="fa-solid fa-circle-nodes animate-spin text-xs"
@@ -355,10 +404,14 @@
               ></i
               >10% SEMI-ANNUAL SAVINGS
             </span>
-            <p class="text-[10px] text-slate-500 font-bold leading-normal">
+            <p
+              class="text-[10px] text-slate-500 dark:text-slate-400 font-bold leading-normal"
+            >
               Price reduced from $894 to
-              <strong class="text-amber-600 font-black">$804</strong> at
-              checkout.
+              <strong class="text-amber-600 dark:text-amber-400 font-black"
+                >$804</strong
+              >
+              at checkout.
             </p>
           </div>
           <div
@@ -367,7 +420,9 @@
             -$90
           </div>
         </div>
-        <span class="text-xs font-bold text-blue-600 mt-4 block text-right">
+        <span
+          class="text-xs font-bold text-blue-600 dark:text-blue-450 mt-4 block text-right"
+        >
           Select Plan <i class="fa-solid fa-arrow-down ml-1"></i>
         </span>
       </div>
@@ -382,12 +437,12 @@
           'parent-platinum',
         )
       "
-      class="premium-card bg-white p-8 rounded-3xl flex flex-col justify-between cursor-pointer border-2 best-value-card relative shadow-md"
+      class="premium-card bg-white dark:bg-slate-900 border-2 border-gray-200 dark:border-slate-800 p-8 rounded-3xl flex flex-col justify-between cursor-pointer best-value-card relative shadow-md text-slate-900 dark:text-slate-100 transition-all duration-300"
     >
       <div>
         <div class="flex justify-between items-center">
           <h4
-            class="font-black text-blue-600 text-[10px] uppercase tracking-widest"
+            class="font-black text-blue-600 dark:text-blue-400 text-[10px] uppercase tracking-widest"
           >
             Parental Care • 12 Months
           </h4>
@@ -398,32 +453,41 @@
           </span>
         </div>
         <h3
-          class="font-black text-slate-950 text-xl mt-1.5 uppercase tracking-wider"
+          class="font-black text-slate-950 dark:text-white text-xl mt-1.5 uppercase tracking-wider"
         >
           Platinum Pro Plan
         </h3>
         <div class="my-4.5">
           <div class="flex items-baseline gap-2">
-            <span class="text-4xl font-black text-blue-600">$1,341</span>
-            <span class="text-sm font-bold text-gray-400 line-through"
+            <span class="text-4xl font-black text-blue-600 dark:text-blue-400"
+              >$1,341</span
+            >
+            <span
+              class="text-sm font-bold text-gray-400 dark:text-slate-500 line-through"
               >$1,788</span
             >
             <span
-              class="text-[10px] text-emerald-700 font-black bg-emerald-100/80 px-2 py-0.5 rounded-md"
+              class="text-[10px] text-emerald-700 font-black bg-emerald-100/80 dark:bg-emerald-950/40 dark:text-emerald-450 px-2 py-0.5 rounded-md"
             >
               SAVE $447
             </span>
           </div>
-          <div class="text-[11px] text-blue-650 font-bold mt-1 uppercase">
+          <div
+            class="text-[11px] text-blue-650 dark:text-blue-400 font-bold mt-1 uppercase"
+          >
             USD/12 MONTHS
-            <span class="text-slate-400 font-medium lowercase"
+            <span
+              class="text-slate-400 dark:text-slate-500 font-medium lowercase"
               >($111.75/month equivalent)</span
             >
           </div>
         </div>
-        <p class="text-xs text-gray-500 font-medium leading-relaxed">
-          Year-round care coordination, bilingual emergency support routing, and
-          real-time status updates directly via WhatsApp.
+        <p
+          class="text-xs text-gray-500 dark:text-slate-400 font-medium leading-relaxed"
+        >
+          Comprehensive 24/7 priority emergency response coordination, direct
+          multi-specialty hospital escorts, regular medical reviews, and
+          on-ground help.
         </p>
       </div>
       <div>
@@ -455,7 +519,7 @@
           </div>
         </div>
         <span
-          class="text-xs font-bold text-blue-600 mt-4 block text-right font-black"
+          class="text-xs font-bold text-blue-600 dark:text-blue-400 mt-4 block text-right font-black"
         >
           Select Plan <i class="fa-solid fa-arrow-down ml-1"></i>
         </span>
@@ -469,7 +533,7 @@
   class="max-w-4xl mx-auto px-6 pb-24 hidden"
 >
   <div
-    class="bg-white rounded-[32px] shadow-2xl border border-gray-100 p-8 sm:p-12 space-y-10 slide-down-panel"
+    class="bg-white dark:bg-slate-900 rounded-[32px] shadow-2xl border border-gray-100 dark:border-slate-800 p-8 sm:p-12 space-y-10 slide-down-panel"
   >
     <div
       id="interactive-plan-header"
@@ -499,9 +563,11 @@
       </div>
     </div>
 
-    <div class="bg-slate-50 border border-gray-100 p-5 sm:p-8 rounded-2xl">
+    <div
+      class="bg-slate-50 dark:bg-slate-950 border border-gray-100 dark:border-slate-850 p-5 sm:p-8 rounded-2xl"
+    >
       <h4
-        class="text-xs font-black uppercase text-slate-500 tracking-wider mb-5"
+        class="text-xs font-black uppercase text-slate-500 dark:text-slate-400 tracking-wider mb-5"
       >
         <i class="fa-solid fa-list-check text-amber-500 mr-1.5"></i> What is
         Included in Your Selected Plan
@@ -512,13 +578,13 @@
         class="hidden grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs font-bold text-slate-700"
       >
         <div
-          class="flex items-center gap-2 bg-white p-4 rounded-xl border border-gray-100 shadow-sm"
+          class="flex items-center gap-2 bg-white dark:bg-slate-900 text-slate-700 dark:text-slate-200 p-4 rounded-xl border border-gray-100 dark:border-slate-800 shadow-sm"
         >
           <i class="fa-solid fa-circle-check text-emerald-500"></i> Monthly
           Video Property Walkthroughs
         </div>
         <div
-          class="flex items-center gap-2 bg-white p-4 rounded-xl border border-gray-100 shadow-sm"
+          class="flex items-center gap-2 bg-white dark:bg-slate-900 text-slate-700 dark:text-slate-200 p-4 rounded-xl border border-gray-100 dark:border-slate-800 shadow-sm"
         >
           <i class="fa-solid fa-circle-check text-emerald-500"></i> Structural
           Leakage & Moisture Testing
@@ -529,19 +595,19 @@
         class="hidden grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs font-bold text-slate-700"
       >
         <div
-          class="flex items-center gap-2 bg-white p-4 rounded-xl border border-gray-100 shadow-sm"
+          class="flex items-center gap-2 bg-white dark:bg-slate-900 text-slate-700 dark:text-slate-200 p-4 rounded-xl border border-gray-100 dark:border-slate-800 shadow-sm"
         >
           <i class="fa-solid fa-circle-check text-emerald-500"></i> Monthly
           Video Property Walkthroughs
         </div>
         <div
-          class="flex items-center gap-2 bg-white p-4 rounded-xl border border-gray-100 shadow-sm"
+          class="flex items-center gap-2 bg-white dark:bg-slate-900 text-slate-700 dark:text-slate-200 p-4 rounded-xl border border-gray-100 dark:border-slate-800 shadow-sm"
         >
           <i class="fa-solid fa-circle-check text-emerald-500"></i> Municipal
           Tax Clearance & Compliance
         </div>
         <div
-          class="flex items-center gap-2 bg-white p-4 rounded-xl border border-gray-100 shadow-sm"
+          class="flex items-center gap-2 bg-white dark:bg-slate-900 text-slate-700 dark:text-slate-200 p-4 rounded-xl border border-gray-100 dark:border-slate-800 shadow-sm"
         >
           <i class="fa-solid fa-circle-check text-emerald-500"></i> Contractor
           Renovation Oversight
@@ -552,19 +618,19 @@
         class="hidden grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs font-bold text-slate-700"
       >
         <div
-          class="flex items-center gap-2 bg-white p-4 rounded-xl border border-gray-100 shadow-sm"
+          class="flex items-center gap-2 bg-white dark:bg-slate-900 text-slate-700 dark:text-slate-200 p-4 rounded-xl border border-gray-100 dark:border-slate-800 shadow-sm"
         >
           <i class="fa-solid fa-circle-check text-emerald-500"></i> Annual
           Property Surveillance Mapping
         </div>
         <div
-          class="flex items-center gap-2 bg-white p-4 rounded-xl border border-gray-100 shadow-sm"
+          class="flex items-center gap-2 bg-white dark:bg-slate-900 text-slate-700 dark:text-slate-200 p-4 rounded-xl border border-gray-100 dark:border-slate-800 shadow-sm"
         >
           <i class="fa-solid fa-circle-check text-emerald-500"></i> Boundary
           Encroachment Inspections
         </div>
         <div
-          class="flex items-center gap-2 bg-white p-4 rounded-xl border border-gray-100 shadow-sm"
+          class="flex items-center gap-2 bg-white dark:bg-slate-900 text-slate-700 dark:text-slate-200 p-4 rounded-xl border border-gray-100 dark:border-slate-800 shadow-sm"
         >
           <i class="fa-solid fa-circle-check text-emerald-500"></i> Priority
           Emergency Damage Coordination
@@ -576,13 +642,13 @@
         class="hidden grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs font-bold text-slate-700"
       >
         <div
-          class="flex items-center gap-2 bg-white p-4 rounded-xl border border-gray-100 shadow-sm"
+          class="flex items-center gap-2 bg-white dark:bg-slate-900 text-slate-700 dark:text-slate-200 p-4 rounded-xl border border-gray-100 dark:border-slate-800 shadow-sm"
         >
           <i class="fa-solid fa-circle-check text-emerald-500"></i> Cooperative
           Bank Passbook Updates
         </div>
         <div
-          class="flex items-center gap-2 bg-white p-4 rounded-xl border border-gray-100 shadow-sm"
+          class="flex items-center gap-2 bg-white dark:bg-slate-900 text-slate-700 dark:text-slate-200 p-4 rounded-xl border border-gray-100 dark:border-slate-800 shadow-sm"
         >
           <i class="fa-solid fa-circle-check text-emerald-500"></i> Utility Bill
           Payments & Clearing
@@ -593,19 +659,19 @@
         class="hidden grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs font-bold text-slate-700"
       >
         <div
-          class="flex items-center gap-2 bg-white p-4 rounded-xl border border-gray-100 shadow-sm"
+          class="flex items-center gap-2 bg-white dark:bg-slate-900 text-slate-700 dark:text-slate-200 p-4 rounded-xl border border-gray-100 dark:border-slate-800 shadow-sm"
         >
           <i class="fa-solid fa-circle-check text-emerald-500"></i> Grocery &
           Pantry Deliveries
         </div>
         <div
-          class="flex items-center gap-2 bg-white p-4 rounded-xl border border-gray-100 shadow-sm"
+          class="flex items-center gap-2 bg-white dark:bg-slate-900 text-slate-700 dark:text-slate-200 p-4 rounded-xl border border-gray-100 dark:border-slate-800 shadow-sm"
         >
           <i class="fa-solid fa-circle-check text-emerald-500"></i> Video Call
           Technical Setup
         </div>
         <div
-          class="flex items-center gap-2 bg-white p-4 rounded-xl border border-gray-100 shadow-sm"
+          class="flex items-center gap-2 bg-white dark:bg-slate-900 text-slate-700 dark:text-slate-200 p-4 rounded-xl border border-gray-100 dark:border-slate-800 shadow-sm"
         >
           <i class="fa-solid fa-circle-check text-emerald-500"></i> Medicine
           Refill & Checkups
@@ -616,13 +682,13 @@
         class="hidden grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs font-bold text-slate-700"
       >
         <div
-          class="flex items-center gap-2 bg-white p-4 rounded-xl border border-gray-100 shadow-sm"
+          class="flex items-center gap-2 bg-white dark:bg-slate-900 text-slate-700 dark:text-slate-200 p-4 rounded-xl border border-gray-100 dark:border-slate-800 shadow-sm"
         >
           <i class="fa-solid fa-circle-check text-emerald-500"></i> All Parental
           Care Deliverables Included
         </div>
         <div
-          class="flex items-center gap-2 bg-white p-4 rounded-xl border border-gray-100 shadow-sm"
+          class="flex items-center gap-2 bg-white dark:bg-slate-900 text-slate-700 dark:text-slate-200 p-4 rounded-xl border border-gray-100 dark:border-slate-800 shadow-sm"
         >
           <i class="fa-solid fa-circle-check text-emerald-500"></i> Bilingual
           WhatsApp Status Updates
@@ -638,7 +704,7 @@
       <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
         <div>
           <label
-            class="block text-xs font-black uppercase tracking-wider text-gray-700 mb-2"
+            class="block text-xs font-black uppercase tracking-wider text-gray-700 dark:text-slate-350 mb-2"
             >Your Full Name</label
           >
           <input
@@ -647,12 +713,12 @@
             required
             minlength="3"
             placeholder="Rajesh Patel"
-            class="w-full px-4 py-3.5 border border-gray-300 rounded-xl text-sm bg-gray-50/50 focus:outline-none focus:ring-2 focus:ring-slate-900 font-medium transition-all"
+            class="w-full px-4 py-3.5 border border-gray-300 dark:border-slate-800 rounded-xl text-sm bg-gray-50/50 dark:bg-slate-900/50 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-slate-900 dark:focus:ring-amber-500 font-medium transition-all"
           />
         </div>
         <div>
           <label
-            class="block text-xs font-black uppercase tracking-wider text-gray-700 mb-2"
+            class="block text-xs font-black uppercase tracking-wider text-gray-700 dark:text-slate-350 mb-2"
             >Your Email Address</label
           >
           <input
@@ -660,7 +726,7 @@
             id="form-email"
             required
             placeholder="rajesh@example.com"
-            class="w-full px-4 py-3.5 border border-gray-300 rounded-xl text-sm bg-gray-50/50 focus:outline-none focus:ring-2 focus:ring-slate-900 font-medium transition-all"
+            class="w-full px-4 py-3.5 border border-gray-300 dark:border-slate-800 rounded-xl text-sm bg-gray-50/50 dark:bg-slate-900/50 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-slate-900 dark:focus:ring-amber-500 font-medium transition-all"
           />
         </div>
       </div>
@@ -668,24 +734,136 @@
       <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
         <div>
           <label
-            class="block text-xs font-black uppercase tracking-wider text-gray-700 mb-2"
+            class="block text-xs font-black uppercase tracking-wider text-gray-700 dark:text-slate-350 mb-2"
             >WhatsApp Phone Number</label
           >
-          <input
-            type="tel"
-            id="form-intl-phone"
-            required
-            placeholder="+61 450 920 249"
-            class="w-full px-4 py-3.5 border border-gray-300 rounded-xl text-sm bg-gray-50/50 focus:outline-none focus:ring-2 focus:ring-slate-900 font-medium transition-all"
-          />
+          <div class="relative">
+            <div
+              class="flex rounded-xl border border-gray-300 dark:border-slate-700 bg-gray-50/50 dark:bg-slate-900/50 overflow-hidden focus-within:ring-2 focus-within:ring-slate-900 dark:focus-within:ring-amber-500 transition-all"
+            >
+              <!-- Dropdown Button -->
+              <button
+                type="button"
+                id="phone-country-btn"
+                onclick="toggleCountryDropdown(event)"
+                class="flex items-center gap-1.5 px-3.5 bg-gray-100 dark:bg-slate-800 border-r border-gray-300 dark:border-slate-700 text-sm font-bold text-gray-800 dark:text-gray-200 hover:bg-gray-200 dark:hover:bg-slate-700 transition-colors focus:outline-none"
+              >
+                <span id="selected-flag">🇺🇸</span>
+                <span id="selected-code">+1</span>
+                <i
+                  class="fa-solid fa-chevron-down text-[10px] text-gray-400 dark:text-slate-550"
+                ></i>
+              </button>
+              <!-- Phone Input -->
+              <input
+                type="tel"
+                id="form-intl-phone"
+                required
+                placeholder="450 920 249"
+                class="w-full px-4 py-3.5 text-sm bg-transparent focus:outline-none text-gray-900 dark:text-white font-medium transition-all"
+              />
+            </div>
+            <!-- Dropdown Menu -->
+            <div
+              id="phone-country-dropdown"
+              class="hidden absolute z-50 left-0 mt-2 w-64 max-h-60 overflow-y-auto bg-white dark:bg-slate-900 border border-gray-200 dark:border-slate-800 rounded-xl shadow-xl transition-all"
+            >
+              <div class="p-1.5 space-y-0.5">
+                <button
+                  type="button"
+                  onclick="selectCountry('🇺🇸', '+1', 'US')"
+                  class="w-full flex items-center justify-between px-3 py-2 text-xs font-bold text-gray-700 dark:text-slate-355 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors text-left"
+                >
+                  <span class="flex items-center gap-2"
+                    ><span>🇺🇸</span><span>United States</span></span
+                  >
+                  <span class="text-gray-400 dark:text-slate-500 font-semibold"
+                    >+1</span
+                  >
+                </button>
+                <button
+                  type="button"
+                  onclick="selectCountry('🇨🇦', '+1', 'CA')"
+                  class="w-full flex items-center justify-between px-3 py-2 text-xs font-bold text-gray-700 dark:text-slate-355 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors text-left"
+                >
+                  <span class="flex items-center gap-2"
+                    ><span>🇨🇦</span><span>Canada</span></span
+                  >
+                  <span class="text-gray-400 dark:text-slate-500 font-semibold"
+                    >+1</span
+                  >
+                </button>
+                <button
+                  type="button"
+                  onclick="selectCountry('🇬🇧', '+44', 'GB')"
+                  class="w-full flex items-center justify-between px-3 py-2 text-xs font-bold text-gray-700 dark:text-slate-355 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors text-left"
+                >
+                  <span class="flex items-center gap-2"
+                    ><span>🇬🇧</span><span>United Kingdom</span></span
+                  >
+                  <span class="text-gray-400 dark:text-slate-500 font-semibold"
+                    >+44</span
+                  >
+                </button>
+                <button
+                  type="button"
+                  onclick="selectCountry('🇦🇺', '+61', 'AU')"
+                  class="w-full flex items-center justify-between px-3 py-2 text-xs font-bold text-gray-700 dark:text-slate-355 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors text-left"
+                >
+                  <span class="flex items-center gap-2"
+                    ><span>🇦🇺</span><span>Australia</span></span
+                  >
+                  <span class="text-gray-400 dark:text-slate-500 font-semibold"
+                    >+61</span
+                  >
+                </button>
+                <button
+                  type="button"
+                  onclick="selectCountry('🇮🇳', '+91', 'IN')"
+                  class="w-full flex items-center justify-between px-3 py-2 text-xs font-bold text-gray-700 dark:text-slate-355 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors text-left"
+                >
+                  <span class="flex items-center gap-2"
+                    ><span>🇮🇳</span><span>India</span></span
+                  >
+                  <span class="text-gray-400 dark:text-slate-500 font-semibold"
+                    >+91</span
+                  >
+                </button>
+                <button
+                  type="button"
+                  onclick="selectCountry('🇦🇪', '+971', 'AE')"
+                  class="w-full flex items-center justify-between px-3 py-2 text-xs font-bold text-gray-700 dark:text-slate-355 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors text-left"
+                >
+                  <span class="flex items-center gap-2"
+                    ><span>🇦🇪</span><span>United Arab Emirates</span></span
+                  >
+                  <span class="text-gray-400 dark:text-slate-500 font-semibold"
+                    >+971</span
+                  >
+                </button>
+                <button
+                  type="button"
+                  onclick="selectCountry('🇳🇿', '+64', 'NZ')"
+                  class="w-full flex items-center justify-between px-3 py-2 text-xs font-bold text-gray-700 dark:text-slate-355 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors text-left"
+                >
+                  <span class="flex items-center gap-2"
+                    ><span>🇳🇿</span><span>New Zealand</span></span
+                  >
+                  <span class="text-gray-400 dark:text-slate-500 font-semibold"
+                    >+64</span
+                  >
+                </button>
+              </div>
+            </div>
+          </div>
           <span
             id="phone-error-node"
-            class="text-[11px] font-bold text-red-600 hidden mt-1.5 block"
+            class="text-[11px] font-bold text-red-600 dark:text-red-400 hidden mt-1.5 block"
           ></span>
         </div>
         <div>
           <label
-            class="block text-xs font-black uppercase tracking-wider text-gray-700 mb-2"
+            class="block text-xs font-black uppercase tracking-wider text-gray-700 dark:text-slate-355 mb-2"
             >Your Profession</label
           >
           <input
@@ -693,14 +871,14 @@
             id="form-profession"
             required
             placeholder="Software Engineer / Business Owner"
-            class="w-full px-4 py-3.5 border border-gray-300 rounded-xl text-sm bg-gray-50/50 focus:outline-none focus:ring-2 focus:ring-slate-900 font-medium"
+            class="w-full px-4 py-3.5 border border-gray-300 dark:border-slate-800 rounded-xl text-sm bg-gray-50/50 dark:bg-slate-900/50 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-slate-900 dark:focus:ring-amber-500 font-medium"
           />
         </div>
       </div>
 
       <div>
         <label
-          class="block text-xs font-black uppercase tracking-wider text-gray-700 mb-2"
+          class="block text-xs font-black uppercase tracking-wider text-gray-700 dark:text-slate-355 mb-2"
           >Home Address in Visnagar / Mehsana</label
         >
         <input
@@ -708,13 +886,13 @@
           id="form-address"
           required
           placeholder="VIP Society, Kansa Road, Visnagar"
-          class="w-full px-4 py-3.5 border border-gray-300 rounded-xl text-sm bg-gray-50/50 focus:outline-none focus:ring-2 focus:ring-slate-900 font-medium"
+          class="w-full px-4 py-3.5 border border-gray-300 dark:border-slate-800 rounded-xl text-sm bg-gray-50/50 dark:bg-slate-900/50 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-slate-900 dark:focus:ring-amber-500 font-medium"
         />
       </div>
 
       <div>
         <label
-          class="block text-xs font-black uppercase tracking-wider text-gray-700 mb-2"
+          class="block text-xs font-black uppercase tracking-wider text-gray-700 dark:text-slate-355 mb-2"
           >Special Instructions or Specific Requirements</label
         >
         <textarea
@@ -722,7 +900,7 @@
           rows="3"
           required
           placeholder="Describe details regarding vacant bungalow checks or local paperwork tracking required..."
-          class="w-full px-4 py-3.5 border border-gray-300 rounded-xl text-sm bg-gray-50/50 focus:outline-none focus:ring-2 focus:ring-slate-900 font-medium"
+          class="w-full px-4 py-3.5 border border-gray-300 dark:border-slate-800 rounded-xl text-sm bg-gray-50/50 dark:bg-slate-900/50 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-slate-900 dark:focus:ring-amber-500 font-medium"
         ></textarea>
       </div>
 

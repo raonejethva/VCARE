@@ -88,11 +88,22 @@ function clearFormErrors() {
  * @returns {object} Form data
  */
 function collectFormData() {
+  const phoneField = getElement("form-intl-phone");
+  const selectedCode = getElement("selected-code")?.innerText || "";
+  let finalPhone = phoneField ? phoneField.value.trim() : "";
+  if (
+    finalPhone &&
+    !finalPhone.startsWith("+") &&
+    !finalPhone.startsWith("00")
+  ) {
+    finalPhone = selectedCode + " " + finalPhone;
+  }
+
   return {
     nriName: getElement("form-name")?.value || "",
     nriEmail: getElement("form-email")?.value || "",
     profession: getElement("form-profession")?.value || "",
-    abroadPhone: getElement("form-intl-phone")?.value || "",
+    abroadPhone: finalPhone,
     planSelected: getSelectedPlan(),
     vatanAddress: getElement("form-address")?.value || "",
     elderScopeIssues: getElement("form-work")?.value || "",

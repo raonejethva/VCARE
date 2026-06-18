@@ -215,15 +215,15 @@ function updateCardStyling(activeType, allKeys) {
     // Reset card styling
     if (k === "parent-platinum") {
       targetCard.className =
-        "premium-card bg-white p-8 rounded-3xl flex flex-col justify-between h-full cursor-pointer border-2 best-value-card relative shadow-md";
+        "premium-card bg-white dark:bg-slate-900 border-2 border-gray-200 dark:border-slate-800 p-8 rounded-3xl flex flex-col justify-between h-full cursor-pointer best-value-card relative shadow-md text-slate-900 dark:text-slate-100 transition-all duration-300";
     } else {
       const borderColor = k.includes("silver")
         ? "border-t-slate-400"
         : k.includes("gold")
-          ? "border-t-yellow-400"
+          ? "border-t-amber-500"
           : "border-t-blue-400";
 
-      targetCard.className = `premium-card bg-white border border-gray-200 p-8 rounded-3xl flex flex-col justify-between h-full cursor-pointer border-t-4 ${borderColor}`;
+      targetCard.className = `premium-card bg-white dark:bg-slate-900 border border-gray-200 dark:border-slate-800 p-8 rounded-3xl flex flex-col justify-between h-full cursor-pointer border-t-4 ${borderColor} text-slate-900 dark:text-slate-100 transition-all duration-300`;
     }
   });
 
@@ -232,10 +232,10 @@ function updateCardStyling(activeType, allKeys) {
   if (activeCard) {
     if (activeType === "parent-platinum") {
       activeCard.className =
-        "premium-card bg-white p-8 rounded-3xl flex flex-col justify-between cursor-pointer border-4 border-blue-600 best-value-card relative transform scale-105";
+        "premium-card bg-white dark:bg-slate-900 p-8 rounded-3xl flex flex-col justify-between cursor-pointer border-4 border-blue-600 dark:border-blue-500 best-value-card relative transform scale-105 shadow-2xl bg-gradient-to-b from-white to-blue-50/20 dark:from-slate-900 dark:to-blue-950/20 text-slate-900 dark:text-slate-100 transition-all duration-300";
     } else {
       activeCard.className =
-        "premium-card bg-white border-2 border-amber-500 p-8 rounded-3xl flex flex-col justify-between shadow-xl relative transform scale-105 cursor-pointer";
+        "premium-card bg-white dark:bg-slate-900 border-2 border-amber-500 dark:border-amber-400 p-8 rounded-3xl flex flex-col justify-between shadow-xl relative transform scale-105 cursor-pointer text-slate-900 dark:text-slate-100 transition-all duration-300";
     }
   }
 }
