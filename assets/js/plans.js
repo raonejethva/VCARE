@@ -20,6 +20,29 @@ function activatePlanFlow(planName, typeKey) {
     planTitleNode.innerHTML = `<i class="fa-solid fa-box-open text-amber-500 mr-2"></i> ${escapeHtml(planName)}`;
   }
 
+  const discountNode = getElement("target-plan-discount");
+  const discountText = getElement("discount-text-value");
+
+  const discounts = {
+    "prop-gold":
+      "10% Semi-Annual Savings Applied! Final checkout total drops to $432 (Save $48)",
+    "prop-platinum":
+      "25% Annual VIP Savings Applied! Final checkout total drops to $720 (Save $240)",
+    "parent-gold":
+      "10% Semi-Annual Savings Applied! Final checkout total drops to $804 (Save $90)",
+    "parent-platinum":
+      "25% Annual VIP Savings Applied! Final checkout total drops to $1341 (Save $447)",
+  };
+
+  if (discountNode && discountText) {
+    if (discounts[typeKey]) {
+      discountText.innerText = discounts[typeKey];
+      discountNode.classList.remove("hidden");
+    } else {
+      discountNode.classList.add("hidden");
+    }
+  }
+
   // Hide all service panels
   const serviceKeys = [
     "prop-silver",
